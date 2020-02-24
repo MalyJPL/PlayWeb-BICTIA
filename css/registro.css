@@ -30,8 +30,8 @@ body {
     font-size: 12px;
     line-height: 25;
     text-align: center;
-    border-top: 2px solid #ff851b;
-    border-bottom: 2px solid #ff851b;
+    border-top: 2px solid #6b5ca5;
+    border-bottom: 2px solid  #6b5ca5;
     transition: all.5s ease;
     cursor: pointer;
 }
@@ -61,7 +61,7 @@ body {
     color: #fff;
     border: none;
     border-radius: 2px;
-    border-bottom: 4px solid #ff851b;
+    border-bottom: 4px solid  #6b5ca5;
     font-family: roboto;
     font-size: 14px;
     font-weight: normal;
@@ -74,7 +74,7 @@ body {
     border-bottom: 4px solid #0075d9;
 }
 .contenedor-form input[type="submit"]{
-    border: #ff851b;
+    border: #6b5ca5;
     counter-reset: #fff;
     border: none;
     width: 100%;
@@ -106,5 +106,9 @@ body {
 }
 .contenedor-form.formulario:nth-child(2){
     display: block;
+}
+
+.span{
+    text-align: center;
 }
 
