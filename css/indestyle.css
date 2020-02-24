@@ -1,0 +1,30 @@
+.containerVid{
+   position: absolute;
+
+
+}
+
+.videoIni{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000;
+    z-index: 1; /* // ojo con esto */
+    opacity: .60;
+}
+
+.text1{
+    z-index: 2;
+    color: #c6d8ff;
+} 
+
+.texth1{
+    color: #71a9f7;
+    z-index: 2;
+    font-size: 50px;
+    text-align: center;
+    position: absolute; /* Este fue el que dejo el texto sobre los botones */
+
+}
