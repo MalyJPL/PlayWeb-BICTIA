@@ -21,6 +21,8 @@ body {
     border-radius: 5px;
     padding: 40px;    
 }
+
+/*
 .contenedor-form.toggle{
     position: absolute;
     top: 7px;
@@ -42,7 +44,7 @@ body {
 }
 .contenedor-form.toggle:hover{
     border-top: 2px solid #0075d9;
-    border-bottom: 2px solid #0075d9;
+    border-bottom: 2px solid #0075d9;*/
 }
 .contenedor-form h2 {
     margin: 0 0 28px 0;
