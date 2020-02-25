@@ -1,27 +1,30 @@
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 body {
-    background-image:url(https://live.staticflickr.com/56/116034255_0a57ade1f5_o.jpg);
-    background-size:cover ;
+    background-image: url(https://live.staticflickr.com/56/116034255_0a57ade1f5_o.jpg);
+    background-size: cover;
     background-attachment: fixed;
     font-family: Roboto;
 }
-.contenedor-form{
+
+.contenedor-form {
     position: relative;
-    background:rgba(0,0,0,.7);
+    background: rgba(0, 0, 0, .7);
     width: 100%;
     max-width: 500px;
     margin: 48px auto;
-    color:#fff;
+    color: #fff;
     border-radius: 5px;
-    padding: 40px;    
+    padding: 40px;
 }
-.contenedor-form.toggle{
+
+.contenedor-form.toggle {
     position: absolute;
     top: 7px;
     right: 7px;
@@ -36,20 +39,22 @@ body {
     cursor: pointer;
 }
 
-.contenedor-form.toggle span{
-    letter-spacing: 1px;  
-    
+.contenedor-form.toggle span {
+    letter-spacing: 1px;
 }
-.contenedor-form.toggle:hover{
+
+.contenedor-form.toggle:hover {
     border-top: 2px solid #0075d9;
     border-bottom: 2px solid #0075d9;
 }
+
 .contenedor-form h2 {
     margin: 0 0 28px 0;
     font-size: 20px;
-    font-weight:800;
+    font-weight: 800;
     line-height: 1;
 }
+
 .contenedor-form input[type="tex"],
 .contenedor-form input[type="password"],
 .contenedor-form input[type="email"] {
@@ -66,14 +71,16 @@ body {
     font-size: 14px;
     font-weight: normal;
     margin: 0 0 20px 0;
-    transition:all .5s ease;
+    transition: all .5s ease;
 }
+
 .contenedor-form input[type="tex"]:focus,
 .contenedor-form input[type="password"]:focus,
 .contenedor-form input[type="email"]:focus {
     border-bottom: 4px solid #0075d9;
 }
-.contenedor-form input[type="submit"]{
+
+.contenedor-form input[type="submit"] {
     border: #ff851b;
     counter-reset: #fff;
     border: none;
@@ -83,28 +90,33 @@ body {
     font-family: roboto;
     letter-spacing: 1px;
     font-size: 16px;
-    cursor: pointer; 
+    cursor: pointer;
     transition: all .5 ease;
-
 }
-.contenedor-form input[type="submit"]:hover{
-    background: rgba(0, 117,217,0.7);
+
+.contenedor-form input[type="submit"]:hover {
+    background: rgba(0, 117, 217, 0.7);
     width: 100%;
     padding: 15px 0;
     text-align: center;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
 }
+
 .contenedor-form .reset-password a {
     color: #fff;
     text-decoration: none;
-    font-size: 16px;   
+    font-size: 16px;
 }
-.contenedor-form.formulario{
+
+.contenedor-form.formulario {
     padding: 40px;
     display: none;
 }
-.contenedor-form.formulario:nth-child(2){
+
+.contenedor-form.formulario:nth-child(2) {
     display: block;
 }
 
+
+/* Comentario de prueba para comprobar cambios en git */
