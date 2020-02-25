@@ -15,3 +15,7 @@ Negro
 Blanco
 */
 
+.boton_buscar:hover {
+    background-color: #6b5ca5;
+    
+}
