@@ -17,5 +17,19 @@ Blanco
 
 .boton_buscar:hover {
     background-color: #6b5ca5;
-    
 }
+
+
+.card-body1 {
+    text-align: center;
+}
+
+.container1 {
+margin-left: 1%;
+margin-top: 2%;
+}
+
+.video1 {
+    width: 100%;
+}
+
