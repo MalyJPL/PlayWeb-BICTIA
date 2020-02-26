@@ -1,11 +1,8 @@
 /* Comentar todo cambio realizado */
 
-
 /* Hoja de estilos Css - PlayWeb */
 
-
 /* Paleta de colores */
-
 
 /* 
 #c6d8ff
@@ -13,10 +10,15 @@
 #6b5ca5
 Negro
 Blanco
+
+#1f53c5 axul
+#24203c negro
+
 */
 
 .boton_buscar:hover {
-    background-color: #6b5ca5;
+    background-color: #6b5ca5; 
+
 }
 
 
@@ -32,4 +34,19 @@ margin-top: 2%;
 .video1 {
     width: 100%;
 }
+
+/* estilos pagina de  categorias  richard */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
