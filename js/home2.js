@@ -1,7 +1,10 @@
+// javascript del navegador
 
 var localuser = JSON.parse(localStorage.user);
 console.log(localuser.user)
+document.getElementById("usuario").innerHTML = localuser.user.toUpperCase() 
 
+// termina javascript del navegador
 
 var objs = [""]
 for (var i = 0; i <4; i++) {
