@@ -121,7 +121,7 @@ for (var x = 0; x < 6; x++) {
 
     incluyec += '<div class="card col-4">'
         + '<h3 class="titulo">' + objsc[x].titulo + '</h3>'
-        + '<iframe class="video1" width="390" height="250" frameborder="5" allow="autoplay; fullscreen" allowfullscreen src="' + objsc[x].iframe + '?title=false">' + '</iframe>'
+        + '<iframe class="video1" width="390" height="250" frameborder="5" allow="autoplay; fullscreen" allowfullscreen src="' + objsc[x].iframe + '?title=false?portrait=false">' + '</iframe>'
         + '<p class="pie de pagina">' + "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, autem dolore excepturi eius cupiditate ipsa repudiandae, qui distinctio eligendi, voluptate earum! Dignissimos sapiente cupiditate nisi recusandae eaque nobis aspernatur esse." + '</p>'
         + "</div>";
 }
