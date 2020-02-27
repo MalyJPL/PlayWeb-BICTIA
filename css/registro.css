@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Calibri;
+    font-family: 'Raleway', ;
     background-image: url("imagenes/fondo.jpg");
 }
 
@@ -55,9 +55,18 @@ body {
     text-decoration: underline;
 }
 
-.form-register .botons {
+.form-register .botonsRegistro {
     width: 100%;
     background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 16px;
+}
+
+.form-register .botonsLogin {
+    width: 100%;
+    background: #244997;
     border: none;
     padding: 12px;
     color: white;
