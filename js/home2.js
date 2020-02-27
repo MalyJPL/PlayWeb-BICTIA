@@ -49,11 +49,9 @@ for (var i = 0; i < 6; i++) {
     var titulo = "titulo" + i;
     incluyer += '<div class="card col-4">'
         + '<h3 class="categoria">' + objsr[i].titulo + '</h3>'
-        + '<iframe class="video1" width="390" height="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objsr[i].iframe + '">' + '</iframe>'
-        + '<p class="pie de pagina">' + "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, autem dolore excepturi eius cupiditate ipsa repudiandae, qui distinctio eligendi, voluptate earum! Dignissimos sapiente cupiditate nisi recusandae eaque nobis aspernatur esse." + '</p>'
+        + '<iframe class="video1" width="390" height="150" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objsr[i].iframe + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=1">' + '</iframe>'
         + "</div>";
 }
-//if marca.i oj=rock  pr que solo escoj por ctegori
 document.getElementById("grid").innerHTML = '<div class="row">' + incluyer + '</div> <br>'
 
 
@@ -121,8 +119,7 @@ for (var x = 0; x < 6; x++) {
 
     incluyec += '<div class="card col-4">'
         + '<h3 class="titulo">' + objsc[x].titulo + '</h3>'
-        + '<iframe class="video1" width="390" height="250" frameborder="5" allow="autoplay; fullscreen" allowfullscreen src="' + objsc[x].iframe + '?title=false?portrait=false">' + '</iframe>'
-        + '<p class="pie de pagina">' + "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, autem dolore excepturi eius cupiditate ipsa repudiandae, qui distinctio eligendi, voluptate earum! Dignissimos sapiente cupiditate nisi recusandae eaque nobis aspernatur esse." + '</p>'
+        + '<iframe class="video1" width="390" height="150" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objsc[x].iframe + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=1">' + '</iframe>'
         + "</div>";
 }
 
@@ -192,13 +189,160 @@ for (var k = 0; k < 6; k++) {
     var titulo = "titulo" + k;
     incluyesal += '<div class="card col-4">'
         + '<h3 class="marca" >' + objsal[k].titulo + '</h3>'
-        + '<iframe class="video1" width="390" height="150" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objsal[k].iframe + '?title=false">' + '</iframe>'
-        + '<p class="pie de pagina">' + "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, autem dolore excepturi eius cupiditate ipsa repudiandae, qui distinctio eligendi, voluptate earum! Dignissimos sapiente cupiditate nisi recusandae eaque nobis aspernatur esse." + '</p>'
+        + '<iframe class="video1" width="390" height="150" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objsal[k].iframe + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=1">' + '</iframe>'
         + "</div>";
 }
 
 document.getElementById("grid3").innerHTML = '<div class="row">' + incluyesal + '</div>'
 
 
+//  Categoria popular
+
+var objpop = [""]
+for (var p = 0; p < 6; p++) {
+    var cardpo = "card" + p;
+    if (p == 0) {
+
+        cardpo = {
+            "iframe": "https://player.vimeo.com/video/364416497",
+            "titulo": "romeo3"
+        }
+
+    } else if (p == 1) {
+
+        cardpo = {
+            "iframe": "https://player.vimeo.com/video/364416497",
+            "titulo": "romeo3"
+        }
+
+    }
+    else if (p == 2) {
+
+        cardpo = {
+            "iframe": "https://player.vimeo.com/video/364416497",
+            "titulo": "romeo3"
+        }
+
+    }
+    else if (p == 3) {
+
+        cardpo = {
+            "iframe": "https://player.vimeo.com/video/364416497",
+            "titulo": "romeo3"
+        }
+
+    }
+    else if (p == 4) {
+
+        cardpo = {
+            "iframe": "https://player.vimeo.com/video/364416497",
+            "titulo": "romeo3"
+        }
+
+    }
+    else if (p == 5) {
+
+        cardpo = {
+            "iframe": "https://player.vimeo.com/video/364416497",
+            "titulo": "romeo3"
+        }
+
+    }
+
+    objpop[p] = cardpo;
+
+}
 
 
+var incluyepop = [""];
+for (var p = 0; p < 6; p++) {
+    var titulo = "titulo" + p;
+    incluyepop += '<div class="card col-4">'
+        + '<h3 class="marca" >' + objpop[p].titulo + '</h3>'
+        + '<iframe class="video1" width="390" height="150" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objpop[p].iframe + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=1">' + '</iframe>'
+        + "</div>";
+}
+
+document.getElementById("grid4").innerHTML = '<div class="row">' + incluyepop + '</div>'
+
+//  Categoria popular
+
+var objreg = [""]
+for (var r = 0; r < 6; r++) {
+    var cardre = "card" + r;
+    if (r == 0) {
+
+        cardre = {
+            "iframe": "https://player.vimeo.com/video/364416497",
+            "titulo": "romeo3"
+        }
+
+    } else if (r == 1) {
+
+        cardre = {
+            "iframe": "https://player.vimeo.com/video/364416497",
+            "titulo": "romeo3"
+        }
+
+    }
+    else if (r == 2) {
+
+        cardre = {
+            "iframe": "https://player.vimeo.com/video/364416497",
+            "titulo": "romeo3"
+        }
+
+    }
+    else if (r == 3) {
+
+        cardre = {
+            "iframe": "https://player.vimeo.com/video/364416497",
+            "titulo": "romeo3"
+        }
+
+    }
+    else if (r == 4) {
+
+        cardre = {
+            "iframe": "https://player.vimeo.com/video/364416497",
+            "titulo": "romeo3"
+        }
+
+    }
+    else if (r == 5) {
+
+        cardre = {
+            "iframe": "https://player.vimeo.com/video/364416497",
+            "titulo": "romeo3"
+        }
+
+    }
+
+    objreg[r] = cardre;
+
+}
+
+
+var incluyereg = [""];
+for (var r = 0; r < 6; r++) {
+    var titulo = "titulo" + r;
+    incluyereg += '<div class="card col-4">'
+        + '<h3 class="marca" >' + objreg[r].titulo + '</h3>'
+        + '<iframe class="video1" width="390" height="150" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objreg[r].iframe + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=1">' + '</iframe>'
+        + "</div>";
+}
+
+document.getElementById("grid5").innerHTML = '<div class="row">' + incluyereg + '</div>'
+
+
+// lo ms visto
+// clsic
+// sls
+// populr
+// reggeto
+// vlleto
+// electroic
+// regge
+// rock
+// carranga
+// jazz
