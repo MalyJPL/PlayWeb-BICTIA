@@ -1,3 +1,8 @@
+
+var localuser = JSON.parse(localStorage.user);
+console.log(localuser.user)
+
+
 var objs = [""]
 for (var i = 0; i <4; i++) {
     var card = "card" + i;
