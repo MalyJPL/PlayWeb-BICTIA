@@ -61,14 +61,13 @@ function register() {
             document.getElementById('password').style.border = alerta;
 
         }
-
-
     }
 
 }
 
 
 function login() {
+    const alertifyPosition = alertify.set('notifier', 'position', 'top-center');
     let userLogin = document.getElementById('userLogin').value;
     let passwordLogin = document.getElementById('passwordLogin').value;
 
@@ -90,9 +89,11 @@ function login() {
         window.location.assign("home.html")
     } else {
         if (userLogin !== localuser.user) {
-            prompt('Usuario no encontrado')
+            alertifyPosition;
+            alertify.error('Usuario no encontrado.');
         } else if (passwordLogin !== localuser.password) {
-            prompt('Contra incorrecta')
+            alertifyPosition;
+            alertify.error('Contraseña incorrecta.');
         }
     }
 }

@@ -1,16 +1,85 @@
 /* Comentar todo cambio realizado */
 
-
 /* Hoja de estilos Css - PlayWeb */
-
 
 /* Paleta de colores */
 
-
 /* 
-#c6d8ff
-#71a9f7
-#6b5ca5
+
+#1f53c5
+#24203c
+
 Negro
 Blanco
+
+#1f53c5 axul
+#24203c negro
+
 */
+
+.boton_buscar:hover {
+    background-color: #1f53c5;
+}
+
+.banner {
+width: 100%;
+height: 350px;
+margin: 0 0 0 0;
+}
+
+.card-body1 {
+    text-align: center;
+  
+}
+
+.container1 {
+
+margin-top: 2%;
+margin: 0 0 0 0;
+}
+
+.video1 {
+    width: 100%;
+}
+
+.barnav_fijo {
+    position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+ 
+}
+
+.tabla1 {
+    margin-left: 15%;
+}
+
+.container2 {
+    margin-left: 65%;
+}
+
+.buscar {
+    
+}
+
+.menu_vertical {
+    width: 15%;
+}
+
+
+#usuario {
+    color: white;
+    margin-top: 1%;
+    
+    
+    }
+    
+
+.tabla_barnav {
+    text-align: left;
+}
+
+.perfil_usuario {
+    margin-left: 100px;
+    margin-right: 0;
+}
