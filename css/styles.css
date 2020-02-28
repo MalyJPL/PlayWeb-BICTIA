@@ -46,8 +46,39 @@ margin: 0 0 0 0;
   position: sticky;
   top: 0;
   z-index: 1;
+ 
+}
+
+.tabla1 {
+    margin-left: 15%;
+}
+
+.container2 {
+    margin-left: 65%;
+}
+
+.buscar {
+    
 }
 
 .menu_vertical {
     width: 15%;
+}
+
+
+#usuario {
+    color: white;
+    margin-top: 1%;
+    
+    
+    }
+    
+
+.tabla_barnav {
+    text-align: left;
+}
+
+.perfil_usuario {
+    margin-left: 100px;
+    margin-right: 0;
 }
