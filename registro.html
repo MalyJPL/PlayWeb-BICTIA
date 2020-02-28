@@ -1,0 +1,50 @@
+<!-- ¡Comentar todo cambio realizado! -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-UA-Compatible" content="ie=edge">
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:600&display=swap" rel="stylesheet">
+    <!-- Css Style sheet -->
+    <link rel="stylesheet" href="css/registro.css">
+
+    <!-- Alertify Style -->
+    <link rel="stylesheet" href="css/alertify/alertify.css">
+
+    <!-- Alertify Theme -->
+    <link rel="stylesheet" href="css/alertify/default.css">
+
+    <title>Formulario Registro</title>
+</head>
+
+<body>
+    <section class="form-register">
+        <h4 class="tituloInicial">Registro</h4>
+        <input class="controls" type="text" id="user" placeholder="Usuario">
+        <input class="controls" type="text" id="name" placeholder="Nombres y Apellidos">
+        <input class="controls" type="email" id="email" placeholder="Ingresa tu Correo">
+        <input class="controls" type="password" id="password" placeholder="Ingresa tu Contraseña">
+        <div class="checkboxTerminos">
+            <input type="checkbox">
+            <span class="checkmark">Estoy de Acuerdo con<a href="#">Terminos y Condiciones</span>
+        </div>
+        <br>
+        <input class="botonsRegistro" type="submit" value="Registrarse" onclick="register()">
+        <br>
+        <br>
+        <input class="botonsLogin" type="button" value="Login" onclick="buttonLogin()">
+    </section>
+
+    <!-- JavaScript -->
+    <script src="js/registro.js"></script>
+    <!-- Alertify -->
+    <script src="js/alertify.js"></script>
+
+</body>
+
+</html>
