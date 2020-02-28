@@ -1,21 +1,17 @@
 function register() {
 
+    // Variables para obtener valores del documento.
     const user = document.getElementById('user').value;
 
     const name = document.getElementById('name').value;
 
-    var email = document.getElementById('email').value;
+    let email = document.getElementById('email').value;
 
-    email = email.toLowerCase();
+    email = email.toLowerCase(); // Convertimos el valor de email a minúsculas.
 
     const password = document.getElementById('password').value;
 
-    console.log(`${user} ${name} ${email} ${password}`);
-
-    // Para obtener
-
-    // JSON.parse(localStorage.getItem('user'))
-
+    // Objeto que contiene las variables anteriores.
     user1 = {
 
         user: user,
@@ -28,25 +24,14 @@ function register() {
 
     }
 
-    /*
-
-    var user = [name, surname, email, password]; // usar split
-
-    */
-
+    // Condición para validar si se ha ingresado los datos necesarios.
     if (user && name && email && password) {
 
-
-
-        // Para guardar el Objeto como String
-
-        localStorage.setItem(
+        localStorage.setItem( // Guardamos el Objeto como String
 
             "user", JSON.stringify(user1),
         );
-        window.location.assign('login.html');
-
-
+        window.location.assign('login.html'); // Redirigimos a la página login.html
 
     } else {
 
@@ -75,33 +60,41 @@ function register() {
 
             document.getElementById('password').style.border = alerta;
 
-        } else {
-
-            alert("Campo desconocido");
-
         }
-
-
-
     }
 
 }
 
 
 function login() {
+    const alertifyPosition = alertify.set('notifier', 'position', 'top-center');
     let userLogin = document.getElementById('userLogin').value;
     let passwordLogin = document.getElementById('passwordLogin').value;
 
     let localuser = JSON.parse(localStorage.user);
 
-    console.log(userLogin)
+    let alerta = "solid 2px red";
 
-    if (userLogin === localuser.user && passwordLogin === localuser.password) {
-        console.log(`Bienvenido! ${userLogin}`)
+    if (userLogin === '') {
+
+        document.getElementById('userLogin').style.border = alerta;
+
+    }
+
+    if (passwordLogin === '') {
+
+        document.getElementById('passwordLogin').style.border = alerta;
+
+    } else if (userLogin === localuser.user && passwordLogin === localuser.password) {
         window.location.assign("home.html")
     } else {
-
-        console.log('Veo socio.')
+        if (userLogin !== localuser.user) {
+            alertifyPosition;
+            alertify.error('Usuario no encontrado.');
+        } else if (passwordLogin !== localuser.password) {
+            alertifyPosition;
+            alertify.error('Contraseña incorrecta.');
+        }
     }
 }
 
