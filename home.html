@@ -30,282 +30,163 @@
 </head>
 
 <body>
-
-   <!-- FUNCIONALIDAD DE BOTON BUSCAR, AUN NO ESTA TERMINADO
-<div class="container mt-5">
-<h1>BUSCADOR indexOF</h1>
-<input type="text" id="formulario" class="form-control">
-<button class="btn btn-info" id="boton">BUSCAR</button>
-<ul id="resultado" >
-</ul>
-</div>
-
-
-
-
-
-<script>
-const canciones = [
-  {nombre: 'AFKHAM - BRAHMS'},
-  {nombre: 'AFKHAM - BRAHMS'},
-  {nombre: 'AFKHAM - BRAHMS'},
-  {nombre: 'AFKHAM - BRAHMS'},
-]
-
-const formulario = document.querySelector('#formulario');
-const boton = document.querySelector('#boton');
-const resultado = document.querySelector('#resultado');
-const filtrar = ()=> {
-  console.log(formulario.value);
-  resultado.innerHTML = '';
-  const texto = formulario.value.toLowerCase();
-  for (let cancion of canciones){
-    let nombre = cancion.nombre.toLowerCase();
-    if (nombre.indexOF(texto) !== -1){
-resultado.innerHTML += `
-<li> ${cancion.nombre} </li>
-`
-    }
-  }
-  if (resultado.innerHTML === ''){
-    resultado.innerHTML += `<li> CANCION NO ENCONTRADA ... </li>`
-
-  }
-}
-
-boton.addEventListener('click', filtrar)
-formulario.addEventListener('keyup',filtrar)
-
-filtrar();
-
-</script>
-FUNCIONALIDAD DE BOTON BUSCAR, AUN NO ESTA TERMINADO -->
-
-
-
-
-
-
-
-
-
   <!-- ACA INICIA EL NAV BAR ................................................................................-->
 
   <div class="barnav_fijo">
     <nav class=" navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark  ">
       <table class="tabla1">
         <tr>
-<td>  <a class="navbar-brand" href="#">PLAY WEB</a> </td>
-<td> <div class="form-inline my-2 my-lg-0 buscar"><input size="40" class="form-control mr-sm-2" type="search" placeholder="Search" aria-lasbel="Search"> </div></td>
-<td><button class=" boton_buscar btn btn-info" type="submit"> <img src="img/LUPA_NEGRA.png"  height="27" alt="">BUSCAR</button></td>
-      
-   
+          <td> <a class="navbar-brand" href="#"><img src="img/logo.png" height="27"></a> </td>
 
+          <!-- ACA INICIA BUSCADOR INTERNO DEL NAVBAR ................................................................................-->
+          <td>
+            <div class="form-inline my-2 my-lg-0 buscar"><input size="40" class="form-control mr-sm-2" type="text"
+                id="input" placeholder="Search..." aria-lasbel="Search" onkeyup="search()"> </div>
+          </td>
+          <td><button class=" boton_buscar btn btn-info" type="submit"> <img src="img/LUPA_NEGRA.png" height="27"
+                alt="">BUSCAR</button></td>
 
+          <!-- ACA INICIA BOTON USUARIO, PERFIL, CERRAR SESION DE NAVBAR................................................................................-->
+          <td>
+            <div class="container2">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <p id="usuario"> USUARIO</p>
+                      <!--esta es la funcion para que en el navegador quede el nombre del usuario mientres inicie sesion -->
+                    </a>
 
-      <!-- ACA INICIA BOTON USUARIO, PERFIL, CERRAR SESION ................................................................................-->
-      <td> <div class="container2">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <p id="usuario"> USUARIO</p>  <!--esta es la funcion para que en el navegador quede el nombre del usuario mientres inicie sesion -->
-              </a>
-
-              <div class="dropdown-menu perfil_usuario" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item"> <img src="img/usuarioavatar11.png" width="27" height="27"
-                    class="d-inline-block align-top" alt=""> PERFIL</a>
-                <a class="dropdown-item"> <img src="img/cerrarsesion_1.png" width="27" height="27"
-                    class="d-inline-block align-top" alt=""> CERRAR SESION</a>
+                    <div class="dropdown-menu perfil_usuario" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item"> <img src="img/usuarioavatar11.png" width="27" height="27"
+                          class="d-inline-block align-top" alt=""> PERFIL</a>
+                      <a class="dropdown-item"> <img src="img/cerrarsesion_1.png" width="27" height="27"
+                          class="d-inline-block align-top" alt=""> CERRAR SESION</a>
+                    </div>
+                </ul>
               </div>
-          </ul>
-        </div>
-      </div>
-      </td>
-    </tr>
-  </table>
+            </div>
+          </td>
+        </tr>
+      </table>
     </nav>
   </div>
-</div>
+  </div>
   </div>
   <!-- AQUI TERMINA NAV BAR ................................................................................-->
+
+
   <img class="banner" src="img/banner11.png" alt="">
 
-  <!-- Se aplica las cards   -->
+  <!-- AQUI INICIA EL MENU DE VIDEOS/HOME ................................................................................-->
 
-  <div id="grid" class="col-12"></div>
-
-  <div id="grid2" class="col-12"></div>
-
-  <div id="grid3" class="col-12"></div>
-
-
-
-
-
-<div class="container1">
-    <div class="row">
-      <div class="col-sm-3 c2 "> 
-        <div class="nav flex-column nav-pills menu_vertical" id="v-pills-tab" role="tablist" aria-orientation="vertical" > 
-          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">LO MAS VISTO</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">CLASICA</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">SALSA</a>
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">POPULAR</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">REGGAETON</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">VALLENATO</a>
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">ELECTRONICA</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">REGGAE </a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">ROCK</a>
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">CARRANGA</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">JAZZ</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">CONTACTO</a>
-        </div>
-      </div>
-
-
-
-      <!--      -- AQUI INICIA EL MENU DE VIDEOS O HOME  ................................................................................
-    <div class="col-sm-3 c2 "> 
-        <div class="card" style="width: 20rem;">
-            <iframe src="https://player.vimeo.com/video/364416497" class="video1" width="250" height="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-            <p><a href="https://vimeo.com/364416497"> </a> <a href="https://vimeo.com/user93236505"></a> <a href="https://vimeo.com"></a></p> 
-          <div class="card-body1">
-              <h5 class="card-title">LA MEJOR VERSION DE MI </h5>
-              <p class="card-text"> Natti Natasha & romeo Santos</p>
-            </div>
+  <div class="menu_izquierda">
+    <div class="container1.1">
+      <div class="row">
+        <div class="col-sm-1 c-2">
+          <div class="nav flex-column nav-pills menu_vertical" id="v-pills-tab" role="tablist"
+            aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#masVisto" role="tab"
+              aria-controls="v-pills-home" aria-selected="true">LO MAS VISTO</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#clasica" role="tab"
+              aria-controls="v-pills-profile" aria-selected="false">CLASICA</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#salsa" role="tab"
+              aria-controls="v-pills-messages" aria-selected="false">SALSA</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#popular" role="tab"
+              aria-controls="v-pills-settings" aria-selected="false">POPULAR</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#reggaeton" role="tab"
+              aria-controls="v-pills-profile" aria-selected="false">REGGAETON</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#vallenato" role="tab"
+              aria-controls="v-pills-messages" aria-selected="false">VALLENATO</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#electronica" role="tab"
+              aria-controls="v-pills-settings" aria-selected="false">ELECTRONICA</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#reggae" role="tab"
+              aria-controls="v-pills-profile" aria-selected="false">REGGAE </a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#rock" role="tab"
+              aria-controls="v-pills-messages" aria-selected="false">ROCK</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#carranga" role="tab"
+              aria-controls="v-pills-settings" aria-selected="false">CARRANGA</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#jazz" role="tab"
+              aria-controls="v-pills-profile" aria-selected="false">JAZZ</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#footer" role="tab"
+              aria-controls="v-pills-messages" aria-selected="false">CONTACTO</a>
           </div>
         </div>
-       
-        <div class="col-sm-3 c2 "> 
-            <div class="card" style="width: 20rem;">
-                <iframe src="https://player.vimeo.com/video/364416497" class="video1" width="250" height="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                <p><a href="https://vimeo.com/364416497"> </a> <a href="https://vimeo.com/user93236505"></a> <a href="https://vimeo.com"></a></p> 
-              <div class="card-body1">
-                  <h5 class="card-title">LA MEJOR VERSION DE MI </h5>
-                  <p class="card-text"> Natti Natasha & romeo Santos</p>
-                </div>
-              </div>
-            </div>
-           
-            <div class="col-sm-3 c2 "> 
-                <div class="card" style="width: 20rem;">
-                    <iframe src="https://player.vimeo.com/video/364416497" class="video1" width="250" height="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                    <p><a href="https://vimeo.com/364416497"> </a> <a href="https://vimeo.com/user93236505"></a> <a href="https://vimeo.com"></a></p> 
-                  <div class="card-body1">
-                      <h5 class="card-title">LA MEJOR VERSION DE MI </h5>
-                      <p class="card-text"> Natti Natasha & romeo Santos</p>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 c2 "> 
-                    <div class="card" style="width: 28rem;">
-                        <iframe src="https://player.vimeo.com/video/364416497" class="video1" width="390" height="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                        <p><a href="https://vimeo.com/364416497"> </a> <a href="https://vimeo.com/user93236505"></a> <a href="https://vimeo.com"></a></p> 
-                      <div class="card-body1">
-                          <h5 class="card-title">LA MEJOR VERSION DE MI </h5>
-                          <p class="card-text"> Natti Natasha & romeo Santos</p>
-                        </div>
-                      </div>
-                    </div>
-                   
-                    <div class="col-sm-4 c2 "> 
-                        <div class="card" style="width: 28rem;">
-                            <iframe src="https://player.vimeo.com/video/364416497" class="video1" width="390" height="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                            <p><a href="https://vimeo.com/364416497"> </a> <a href="https://vimeo.com/user93236505"></a> <a href="https://vimeo.com"></a></p> 
-                          <div class="card-body1">
-                              <h5 class="card-title">LA MEJOR VERSION DE MI </h5>
-                              <p class="card-text"> Natti Natasha & romeo Santos</p>
-                            </div>
-                          </div>
-                        </div>
-                       
-                        <div class="col-sm-4 c2 "> 
-                            <div class="card" style="width: 28rem;">
-                                <iframe src="https://player.vimeo.com/video/364416497" class="video1" width="390" height="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                                <p><a href="https://vimeo.com/364416497"> </a> <a href="https://vimeo.com/user93236505"></a> <a href="https://vimeo.com"></a></p> 
-                              <div class="card-body1">
-                                  <h5 class="card-title">LA MEJOR VERSION DE MI </h5>
-                                  <p class="card-text"> Natti Natasha & romeo Santos</p>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-4 c2 "> 
-                                <div class="card" style="width: 28rem;">
-                                    <iframe src="https://player.vimeo.com/video/364416497" class="video1" width="390" height="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                                    <p><a href="https://vimeo.com/364416497"> </a> <a href="https://vimeo.com/user93236505"></a> <a href="https://vimeo.com"></a></p> 
-                                  <div class="card-body1">
-                                      <h5 class="card-title">LA MEJOR VERSION DE MI </h5>
-                                      <p class="card-text"> Natti Natasha & romeo Santos</p>
-                                    </div>
-                                  </div>
-                                </div>
-                               
-                                <div class="col-sm-4 c2 "> 
-                                    <div class="card" style="width: 28rem;">
-                                        <iframe src="https://player.vimeo.com/video/364416497" class="video1" width="390" height="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                                        <p><a href="https://vimeo.com/364416497"> </a> <a href="https://vimeo.com/user93236505"></a> <a href="https://vimeo.com"></a></p> 
-                                      <div class="card-body1">
-                                          <h5 class="card-title">LA MEJOR VERSION DE MI </h5>
-                                          <p class="card-text"> Natti Natasha & romeo Santos</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                   
-                                    <div class="col-sm-4 c2 "> 
-                                        <div class="card" style="width: 28rem;">
-                                            <iframe src="https://player.vimeo.com/video/364416497" class="video1" width="390" height="250" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                                            <p><a href="https://vimeo.com/364416497"> </a> <a href="https://vimeo.com/user93236505"></a> <a href="https://vimeo.com"></a></p> 
-                                          <div class="card-body1">
-                                              <h5 class="card-title">LA MEJOR VERSION DE MI </h5>
-                                              <p class="card-text"> Natti Natasha & romeo Santos</p>
-                                            </div>
-                                          </div>
-                                        </div>
-                                    </div>
-                              </div>
--->
+      </div>
+    </div>
+  </div>
 
+  <!-- TERMINA MENU DE VIDEOS -->
 
+  <!--      -- AQUI INICIA EL MENU DE VIDEOS O HOME  ................................................................................
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
 Se aplica las cards   -->
-<div><h1>Categoría Rock</h1></div>
-<div id="grid" class="col-12"></div>
+  <!--   Se aplica las cards   -->
+  <br><br>
+  <br><br>
+<ul id="ul">
+  <a name="masVisto">
+    <h3>Categoría lo mas visto</h3>
+  </a>
+  <div id="grid" class="col-10"></div><br><br>
 
-<div><h1>Categoría Clásica</h1></div>
-<div id="grid2" class="col-12"></div>
+  <a name="clasica"> 
+    <h3>Categoría Clásica</h3>
+  </a>
+  <div id="grid2" class="col-10"></div><br><br>
 
-<div><h1>Categoría Salsa</h1></div>
-<div id="grid3" class="col-12"></div>
+  <div>
+    <h3 name="salsa">Categoría Salsa</h3>
+  </div>
+  <div id="grid3" class="col-10"></div><br><br>
+
+  <div>
+    <h3 name="popular">Categoría Popular</h3>
+  </div>
+  <div id="grid4" class="col-10"></div><br><br>
+
+  <div>
+    <h3 name="reggaeton">Categoría Reggaetón​</h3>
+  </div>
+  <div id="grid5" class="col-10"></div><br><br>
+
+  <div>
+    <h3 id="vallenato">Categoría Vallenato</h3>
+  </div>
+  <div id="grid6" class="col-10"></div><br><br>
+
+  <div>
+    <h3 id="elctronica"> Categoría Electronica </h3>
+  </div>
+  <div id="grid7" class="col-9"></div><br><br>
+
+  <div>
+    <h3 id="reggae"> Categoría Reggae</h3>
+  </div>
+  <div id="grid8" class="col-10"></div><br><br>
+
+  <div>
+    <h3 id="rock"> Categoría Rock</h3>
+  </div>
+  <div id="grid9" class="col-10"></div><br><br>
+
+  <div>
+    <h3 id="carranga">Categoría Carranga</h3>
+  </div>
+  <div id="grid10" class="col-10"></div><br><br>
+
+  <div>
+    <h3 id="jazz">Categoría Jazz</h3>
+  </div>
+  <div id="grid11" class="col-10"></div><br><br>
+
+</ul>
 
 
-<<<<<<< HEAD
   <!-- JavaScript -->
+  <script src="js/buscador_interno.js"></script>
   <script src="js/home.js"></script>
-=======
-
-    <!-- JavaScript -->
-    <script src="js/home2.js"></script>
->>>>>>> 34432e562721247b244fd637962c44f3f30b9371
 </body>
 
 </html>
