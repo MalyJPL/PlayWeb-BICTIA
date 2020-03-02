@@ -3,7 +3,6 @@
 /* Hoja de estilos Css - PlayWeb */
 
 /* Paleta de colores */
-
 /* 
 
 #1f53c5
@@ -16,6 +15,11 @@ Blanco
 #24203c negro
 
 */
+
+.card{
+    
+}
+
 
 .boton_buscar:hover {
     background-color: #1f53c5;
@@ -32,10 +36,15 @@ margin: 0 0 0 0;
   
 }
 
-.container1 {
+.menu_izquierda {
+    margin-top: -0px;
+    position:sticky;
+    width: 100px;
+ 
+}
 
-margin-top: 2%;
-margin: 0 0 0 0;
+li {list-style: none;
+
 }
 
 .video1 {
@@ -82,4 +91,8 @@ margin: 0 0 0 0;
 .perfil_usuario {
     margin-left: 100px;
     margin-right: 0;
+}
+
+#ul {
+    margin-left: 23%;
 }
