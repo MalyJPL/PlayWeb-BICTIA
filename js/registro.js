@@ -7,9 +7,17 @@ function register() {
 
     let email = document.getElementById('email').value;
 
+    const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    const alertifyPosition = alertify.set('notifier', 'position', 'top-center');
+
     email = email.toLowerCase(); // Convertimos el valor de email a minúsculas.
 
     const password = document.getElementById('password').value;
+
+    const checkBox = document.getElementById('checkBox');
+
+    const emailMatch = email.match(mailFormat);
 
     // Objeto que contiene las variables anteriores.
     user1 = {
@@ -25,17 +33,18 @@ function register() {
     }
 
     // Condición para validar si se ha ingresado los datos necesarios.
-    if (user && name && email && password) {
+    if (user && name && emailMatch && password && checkBox.checked === true) {
 
         localStorage.setItem( // Guardamos el Objeto como String
 
             "user", JSON.stringify(user1),
-        );
+        )
         window.location.assign('login.html'); // Redirigimos a la página login.html
 
     } else {
 
-        var alerta = "solid 2px red";
+
+        let alerta = "solid 2px red";
 
 
         if (user === '') {
@@ -56,11 +65,24 @@ function register() {
 
         }
 
+        if (email !== emailMatch) {
+            document.getElementById('email').style.border = alerta;
+            alertifyPosition;
+            alertify.error('Email Invalido.');
+        }
+
+        // Encontrar la manera para que no conflictuen la verificación del email con el checkBox.
+
         if (password === '') {
 
             document.getElementById('password').style.border = alerta;
-
         }
+
+        if (checkBox.checked === false) {
+            alertifyPosition;
+            alertify.error('Acepta terminos y condiciones.');
+        }
+
     }
 
 }
