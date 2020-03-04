@@ -10,6 +10,7 @@
 
   <!-- Css Style -->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/footer.css">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -36,7 +37,7 @@
     <nav class=" navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark  ">
       <table class="tabla1">
         <tr>
-          <td> <a class="navbar-brand" href="#"><img src="img/logo.png" height="27"></a> </td>
+          <td> <a class="navbar-brand" href="#"><img src="img/logo.png" height="35"></a> </td>
 
           <!-- ACA INICIA BUSCADOR INTERNO DEL NAVBAR ................................................................................-->
           <td>
@@ -72,125 +73,144 @@
   </div>
   </div>
   </div>
+  
   <!-- AQUI TERMINA NAV BAR ................................................................................-->
 
   <!-- AQUI INICIA EL BANNER -->
-  <img class="banner" src="img/banner11.png" alt="">
+  <img class="banner" src="img/banner11.png" alt="" style="opacity: 0.8">
   <!-- ACA ACABA EL BANNER -->
 
-  <!-- ACA INICIA EL CUERPO CON CONTENIDOS (MENU Y VIDEOS) -->
-  <div class="row">
-    <!-- AQUI INICIA EL MENU DE VIDEOS ................................................................................-->
-    <div class="menu_izquierda col-2">
-      <div class="container1.1">
-        <div class="nav flex-column nav-pills menu_vertical" id="v-pills-tab" role="tablist"
-          aria-orientation="vertical">
-          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#masVisto" role="tab"
-            aria-controls="v-pills-home" aria-selected="true">LO MAS VISTO</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#clasica" role="tab"
-            aria-controls="v-pills-profile" aria-selected="false">CLASICA</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#salsa" role="tab"
-            aria-controls="v-pills-messages" aria-selected="false">SALSA</a>
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#popular" role="tab"
-            aria-controls="v-pills-settings" aria-selected="false">POPULAR</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#reggaeton" role="tab"
-            aria-controls="v-pills-profile" aria-selected="false">REGGAETON</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#vallenato" role="tab"
-            aria-controls="v-pills-messages" aria-selected="false">VALLENATO</a>
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#electronica" role="tab"
-            aria-controls="v-pills-settings" aria-selected="false">ELECTRONICA</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#reggae" role="tab"
-            aria-controls="v-pills-profile" aria-selected="false">REGGAE </a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#rock" role="tab"
-            aria-controls="v-pills-messages" aria-selected="false">ROCK</a>
-          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#carranga" role="tab"
-            aria-controls="v-pills-settings" aria-selected="false">CARRANGA</a>
-          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#jazz" role="tab"
-            aria-controls="v-pills-profile" aria-selected="false">JAZZ</a>
-          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#footer" role="tab"
-            aria-controls="v-pills-messages" aria-selected="false">CONTACTO</a>
-        </div>
-      </div>
+    <!-- AQUI INICIA EL MENU DE VIDEOS VERTICAL IZQUIERDO................................................................................-->
+   
+    <div class="list-group1">
+      <a href="#masVisto" class="list-group-item list-group-item-action list-group-item-primary">LO MAS VISTO</a>
+      <a href="#clasica" class="list-group-item list-group-item-action list-group-item-primary">CLASICA</a>
+      <a href="#salsa" class="list-group-item list-group-item-action list-group-item-primary">SALSA</a>
+      <a href="#popular" class="list-group-item list-group-item-action list-group-item-primary">POPULAR</a>
+      <a href="#reggaeton" class="list-group-item list-group-item-action list-group-item-primary">REGGAETON</a>
+      <a href="#vallenato" class="list-group-item list-group-item-action list-group-item-primary">VALLENATO</a>
+      <a href="#electronica" class="list-group-item list-group-item-action list-group-item-primary">ELECTRONICA</a>
+      <a href="#reggae" class="list-group-item list-group-item-action list-group-item-primary">REGGAE</a>
+      <a href="#rock" class="list-group-item list-group-item-action list-group-item-primary">ROCK</a>
+      <a href="#carranga" class="list-group-item list-group-item-action list-group-item-primary">CARRANGA</a>
+      <a href="#jazz" class="list-group-item list-group-item-action list-group-item-primary">JAZZ</a>
     </div>
+   
+    <!-- TERMINA MENU DE VIDEOS VERTICAL IZQUIERDO ......................................................-->
 
-
-    <!-- TERMINA MENU DE VIDEOS -->
-
-    <!--      -- AQUI INICIA EL MENU DE VIDEOS O HOME  ................................................................................-->
+    <!-- AQUI INICIAN LOS VIDEOS O HOME  ................................................................................-->
     <!--   Se aplica las cards. Los id de cada categoría de música se llaman id + numero. El número es tá en el mismo orden en que están organiadas en JS-->
-    <br><br>
-    <br><br>
-    <div class="col-10">
+    <div class="col-10 container_videos">
       <ul id="ul">
-        <a name="masVisto">
-          <h3>Categoría lo mas visto</h3>
+       
+        <a id="masVisto">
+          <h3 >LO MAS VISTO</h3>
         </a>
         <div id="grid1"></div><br><br>
 
-        <a name="clasica">
-          <h3>Categoría Clásica</h3>
+        <a name="clasica" >
+          <h3 >CLASICA</h3>
         </a>
         <div id="grid2"></div><br><br>
 
         <a name="salsa">
-          <h3>Categoría Salsa</h3>
+          <h3 > SALSA</h3>
         </a>
          <div id="grid3"></div><br><br>
 
     <a name="popular">
-      <h3>Categoría Popular</h3>
+      <h3>POPULAR</h3>
     </a>
     <div id="grid4"></div><br><br>
 
     <a name="reggaeton">
-      <h3>Categoría Reggaetón​</h3>
+      <h3>REGGAETON</h3>
     </a>
     <div id="grid5"></div><br><br>
 
-    
     <a name="electronica">
-      <h3> Categoría Electronica </h3>
+      <h3 id="vallenato"> VALLENATO </h3>
     </a>
     <div id="grid6"></div><br><br>
 
     <a name="vallenato">
-      <h3>Categoría Vallenato</h3>
+      <h3>ELECTRONICA</h3>
       </a>
     <div id="grid7"></div><br><br>
 
-
     <a name="reggae">
-      <h3> Categoría Reggae</h3>
+      <h3> REGGAE</h3>
     </a>
     <div id="grid8"></div><br><br>
 
     <a name="rock">
-      <h3> Categoría Rock</h3>
+      <h3> ROCK</h3>
     </a>
     <div id="grid9"></div><br><br>
 
     <a name="carranga">
-      <h3>Categoría Carranga</h3>
+      <h3>CARRANGA</h3>
     </a>
     <div id="grid10"></div><br><br>
 
     <a name="jazz">
-      <h3>Categoría Jazz</h3>
+      <h3>JAZZ</h3>
     </a>
     <div id="grid11"></div><br><br>
 
     </ul>
   </div>
 
-  </div>
 
-  <footer>
-
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="js/buscador_interno.js"></script>
+  <!-- JavaScript ------------------------------------------------------------------------------------------------------------------------------------------>
+  
   <script src="js/home.js"></script>
 </body>
 
+
+ <!-- ---------------footer---------------------------------------------------------------------------------------------------------------------------- -->
+ 
+ <footer class="footeraOne">
+  <div class="row ">
+    <div class="col-sm footer1">
+      <br>
+      <img  id="funLogo" src="img/logo.png" alt="" width="180px" height="50px">
+      <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, ad illo obcaecati autem nihil voluptates labore. In quidem possimus soluta similique, expedita saepe perferendis aliquam veniam ab deserunt aliquid dolor.</p>
+    </div>
+      <br><br>
+    <div class="col-sm footer1">
+      <br><br>
+      <ol class="genders">
+          <li class="logosRedes"><a href="#"> CLASICA</li></a>
+          <li class="logosRedes"><a href="#"> ELECTRONICA</li></a>
+          <li class="logosRedes"><a href="#"> JAZZ</li></a>
+          <li class="logosRedes"><a href="#"> ROCK</li></a>
+          <li class="logosRedes"><a href="#"> REGGAE</li ></a>
+      </ol>
+    </div>
+
+    <div class="col-sm footer1">
+     <br>
+      <ol class="redes">
+          <!-- twitter -->
+      <li class="logosRedes"><a class="redesAnimadas" href="www.twitter.com" target="_blank"><ion-icon class="icono" name="logo-twitter"></ion-icon>
+      </a></li><br>
+     
+            <!-- youtube -->
+      <li class="logosRedes"><a class="redesAnimadas" href="https://www.pinterest.ca/" target="_blank"><ion-icon class="icono" name="logo-pinterest"></ion-icon></a></li><br>
+    
+            <!-- vimeo -->
+      <li class="logosRedes"><a class="redesAnimadas" href="https://www.youtube.com/" target="_blank"><ion-icon class="icono" name="logo-youtube"></ion-icon>
+      </a></li><br>
+              <!-- snapchat -->
+      <li class="logosRedes"><a class="redesAnimadas" href="https://www.snapchat.com/l/es" ><ion-icon class="icono" name="logo-snapchat"></ion-icon></a></li><br>
+      </ol>
+    </div>
+  </div>   
+
+</footer>
+
+<!-- JS.......................................................................................................................... -->
+
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 </html>
