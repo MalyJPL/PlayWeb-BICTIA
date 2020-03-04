@@ -33,7 +33,7 @@ function register() {
     }
 
     // Condición para validar si se ha ingresado los datos necesarios.
-    if (user && name && emailMatch && password && checkBox.checked === true) {
+    if (user && name && email && password && checkBox.checked === true) {
 
         localStorage.setItem( // Guardamos el Objeto como String
 
