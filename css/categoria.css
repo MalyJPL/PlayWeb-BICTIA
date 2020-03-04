@@ -4,10 +4,10 @@
 
 /* Paleta de colores */
 
-*{border: 5px solid  red; }
+/* *{border: 5px solid  red; }
 **{border: 5px solid yellow;}
 ***{border: 5px solid lightblue;}
-
+ */
 /* 
 #c6d8ff
 #71a9f7
@@ -32,17 +32,18 @@ Blanco
 
 .videopp{
 
-   /* padding: 3px; */
-   margin: auto;
+   padding: 20px;
+   /* margin: auto;
+   margin-left: 5%; */
 }
 
 .pie{
    
 }
 
-.fa fa-thumbs-up{
+.fa-thumbs-up{
     font-size:120px;
-    color:lightblue;
+    color:black;
     text-shadow:2px 2px 4px #000000;
     position: fixed;
 }
