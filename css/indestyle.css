@@ -80,11 +80,11 @@ ion-icon{
 .iconoIndex:hover{
     color: #1f53c5;
 }
-  .botonAnimado:hover{
+.botonAnimado:hover{
       color: white;
       text-decoration: none;
   }
-  .botonAnimado:before{
+.botonAnimado:before{
       content: "";
       position: absolute;
       background-color: #1f53c5;
@@ -99,7 +99,7 @@ ion-icon{
       z-index: -1;
       transition: .3s ease-in;
   }
-  .botonAnimado:hover::before{
+.botonAnimado:hover::before{
       right: 0;
 
       /*para que sea de abajo hacia arriba*/
