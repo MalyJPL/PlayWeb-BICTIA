@@ -6,6 +6,12 @@ document.getElementById("usuario").innerHTML = localuser.user.toUpperCase()
 
 // termina javascript del navegador
 
+//cerrar sesion y devolver al index
+function cerrarSesion(){
+    localStorage.removeItem("user");
+    window.location.assign("index.html")
+}
+
 
 // JS DEL BUSCADOR INTERNO ------------------------------------
 

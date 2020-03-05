@@ -6,6 +6,12 @@ document.getElementById("usuario").innerHTML = localuser.user.toUpperCase()
 
 // termina javascript del navegador
 
+//cerrar sesion y devolver al index
+function cerrarSesion(){
+    localStorage.removeItem("user");
+    window.location.assign("index.html")
+}
+
 
 function myFunction(x) {
     x.classList.toggle("fa-thumbs-down");
@@ -831,8 +837,8 @@ for (var i = 0; i < 66; i++) {
 }
 
 /*obtener el numero de video del JSON*/
-/* var i = JSON.parse(localStorage.noVideo);
- */i= 2;
+
+ i= Number(JSON.parse(localStorage.num));
 
 
 
