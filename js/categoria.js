@@ -1,4 +1,19 @@
- function myFunction(x) {
+// javascript del navegador
+
+var localuser = JSON.parse(localStorage.user);
+console.log(localuser.user)
+document.getElementById("usuario").innerHTML = localuser.user.toUpperCase() 
+
+// termina javascript del navegador
+
+//cerrar sesion y devolver al index
+function cerrarSesion(){
+    localStorage.removeItem("user");
+    window.location.assign("index.html")
+}
+
+
+function myFunction(x) {
     x.classList.toggle("fa-thumbs-down");
   } 
 
@@ -822,14 +837,15 @@ for (var i = 0; i < 66; i++) {
 }
 
 /*obtener el numero de video del JSON*/
-/* var i = JSON.parse(localStorage.noVideo);
- */i= 2;
+
+ i= Number(JSON.parse(localStorage.num));
 
 
 
 /*inyectar la informacion del video en la pagina */
 
 var incluyeGeneral='' 
+
 
 incluyeGeneral +=
      '<h2 class= "titulo"><strong>' + objs[i].titulo + '</strong></h2>'
@@ -845,13 +861,20 @@ console.log(incluyeGeneral);
 
 var incluyeRelacionado = '' 
 
+x=Math.floor(Math.random()*(65-0))
+while(x===i || objs[x].category!=objs[i].category){x=Math.floor(Math.random()*(65-0))}
+
 incluyeRelacionado +=
-     '<h3 class="pie"><strong>'  + objs[i].category +'</strong></h3>'
-    + '<iframe class="videopp" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objs[i].iframe + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=1">' + '</iframe>' 
-    +'<h6 class= "titulo">' + objs[i].titulo + '</h6>'
-    +'<h3 class="pie"><strong>'  + objs[i].category +'</strong></h3>'
-    + '<iframe class="videopp" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objs[i].iframe + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=1">' + '</iframe>' 
-    +'<h6 class= "titulo">' + objs[i].titulo + '</h6>'
+    '<h3 class= "titulo">' + objs[x].titulo + '</h3>'
+    + '<iframe class="videopp" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objs[x].iframe + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=1">' + '</iframe>' 
+    +'<h6 class="pie"><strong>'  + objs[x].category +'</strong></h6>'
+
+    y=Math.floor(Math.random()*(65-0))
+    while(y===i || y===x || objs[y].category!=objs[i].category){y=Math.floor(Math.random()*(65-0))}
+
+    incluyeRelacionado +='<h3 class= "titulo">' + objs[y].titulo + '</h3>'
+    + '<iframe class="videopp" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objs[y].iframe + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=1">' + '</iframe>' 
+    +'<h6 class="pie"><strong>'  + objs[y].category +'</strong></h6>'
 
 document.getElementById("videopeq").innerHTML =  '<h2>Relacionados</h2>'+ incluyeRelacionado + '<br>' 
 console.log(incluyeRelacionado);

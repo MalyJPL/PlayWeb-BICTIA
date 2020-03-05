@@ -1,10 +1,16 @@
 // javascript del navegador
-/*/
+
 var localuser = JSON.parse(localStorage.user);
 console.log(localuser.user)
 document.getElementById("usuario").innerHTML = localuser.user.toUpperCase() 
-*/
+
 // termina javascript del navegador
+
+//cerrar sesion y devolver al index
+function cerrarSesion(){
+    localStorage.removeItem("user");
+    window.location.assign("index.html")
+}
 
 
 // JS DEL BUSCADOR INTERNO ------------------------------------
@@ -771,8 +777,8 @@ for (var j = 0; j < categorias.length; j++) { //para cada categoría
     var incluyer = ""; //esta variable guarda el html que se va a incluir en cada grid. se inicia vacio para cada categoria
     for (var i = 0; i < objs.length; i++) { //recorra los contenidos de la base de datos de videos
         if (objs[i].category === categorias[j]) { // si la categoría del video de la base de datos en esa posición coincide con la del grid de html
-            incluyer += '<li><div class="card col-12">' //agrege al contenido la columna de este video y el label lista (importante para búsqueda)
-                + '<strong><h5 text align ="center" class="titulo"> <strong>' + objs[i].titulo + '</h5>' //el titulo
+            incluyer += '<li><div class="card col-12 onclick="ingresoCategoria(' + objs[i].num + ')">' //agrege al contenido la columna de este video y el label lista (importante para búsqueda)
+                + '<strong><h5 text align ="center" class="titulo" onclick="ingresoCategoria(' + objs[i].num + ')"> <strong>' + objs[i].titulo + '</h5>' //el titulo
                 + '<iframe class="video" width="450" height="230" frameborder="0" allow="fullscreen" allowfullscreen src="' //label iframe propiedades del video
                 + objs[i].iframe //lini del video
                 + '?title=false&portrait=false&byline=false&byline-form=false&baciground=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=0">' //otras propiedades vimeo del video
@@ -786,8 +792,13 @@ for (var j = 0; j < categorias.length; j++) { //para cada categoría
 
 
 
+function ingresoCategoria(i){
+    localStorage.setItem( // Guardamos el Objeto como String
+        "num", JSON.stringify(i)
+    );
 
-
+    window.location.assign("Categorias.html")
+}
 
 //1 lo mas visto
 //2 clasica

@@ -139,9 +139,22 @@ Blanco
       font-family: 'Open Sans;
      
   }*/
+
+  /*hacer que el body se mantenga arriba*/
+  body{ 
+  min-height:100%; 
+  position:relative; 
+  padding-bottom:300px;
+  }
+
   .footeraOne{
       background:  #24303c;
       color: white;
+
+      /*hacer quel footer se mantenga abajo*/
+      position: absolute; 
+      left: 0 ; right: 0; bottom: 0; 
+      height:300px
       /* display: table-row;  */
   }
   
@@ -150,6 +163,7 @@ Blanco
       height: 100%;
      
        }
+
   .parrafo{
      padding: 10%;
      text-align: justify;
