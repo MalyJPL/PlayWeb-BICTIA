@@ -11,6 +11,8 @@
 
     <!-- Css Style -->
     <link rel="stylesheet" href="css/categoria.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -27,8 +29,42 @@
 </head>
 
 <body>
- <!--  -->
-  <!-- AQUI TERMINA NAV BAR ................................................................................-->
+ <!-- ACA INICIA EL NAV BAR ................................................................................-->
+
+ <div class="barnav_fijo">
+  <nav class=" navbar navbar-expand-lg navbar-light bg-light navbar navbar-dark bg-dark  ">
+    <table class="tabla1">
+      <tr>
+        <td> <a class="navbar-brand" href="home.html"><img src="img/logo.png" height="35"></a> </td>
+
+        <!-- ACA INICIA BOTON USUARIO, PERFIL, CERRAR SESION DE NAVBAR................................................................................-->
+        <td>
+          <div class="container2">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <p id="usuario"> USUARIO</p>  <!--esta es la sección para que en el navegador quede el nombre del usuario mientres inicie sesion, se asocia a JavaScript -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  </a>
+                  <div class="dropdown-menu perfil_usuario" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item"> <img src="img/usuarioavatar11.png" width="27" height="27"
+                        class="d-inline-block align-top" alt=""> PERFIL</a>
+                    <a class="dropdown-item"> <img src="img/cerrarsesion_1.png" width="27" height="27"
+                        class="d-inline-block align-top" alt=""> CERRAR SESION</a>
+                  </div>
+              </ul>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </nav>
+</div>
+</div>
+</div>
+
+<!-- AQUI TERMINA NAV BAR ................................................................................-->
 
    <!-- AQUI EMPIEZA CADA CONTENIDO  ................................................................................-->
 
@@ -59,6 +95,52 @@
     
    </div>
 
+   <br> <br> <br> <br> <br> <br>
+ <!-- ---------------footer---------------------------------------------------------------------------------------------------------------------------- -->
+ 
+ <footer class="footeraOne">
+  <div class="row ">
+    <div class="col-sm footer1">
+      <br>
+      <img  id="funLogo" src="img/logo.png" alt="" width="180px" height="50px">
+      <p class="parrafo">Todos los derechos reservados</p>
+    </div>
+      <br><br>
+    <div class="col-sm footer1">
+      <br><br>
+      <ol class="genders">
+          <li class="logosRedes"><a href="home.html#clasica"> CLASICA</li></a>
+          <li class="logosRedes"><a href="home.html#electronica"> ELECTRONICA</li></a>
+          <li class="logosRedes"><a href="home.html#jazz"> JAZZ</li></a>
+          <li class="logosRedes"><a href="home.html#rock"> ROCK</li></a>
+          <li class="logosRedes"><a href="home.html#reggae"> REGGAE</li ></a>
+      </ol>
+    </div>
+
+    <div class="col-sm footer1">
+     <br>
+      <ol class="redes">
+          <!-- twitter -->
+      <li class="logosRedes"><a class="redesAnimadas" href="www.twitter.com" target="_blank"><ion-icon class="icono" name="logo-twitter"></ion-icon>
+      </a></li><br>
+     
+            <!-- youtube -->
+      <li class="logosRedes"><a class="redesAnimadas" href="https://www.pinterest.ca/" target="_blank"><ion-icon class="icono" name="logo-pinterest"></ion-icon></a></li><br>
+    
+            <!-- vimeo -->
+      <li class="logosRedes"><a class="redesAnimadas" href="https://www.youtube.com/" target="_blank"><ion-icon class="icono" name="logo-youtube"></ion-icon>
+      </a></li><br>
+              <!-- snapchat -->
+      <li class="logosRedes"><a class="redesAnimadas" href="https://www.snapchat.com/l/es" ><ion-icon class="icono" name="logo-snapchat"></ion-icon></a></li><br>
+      </ol>
+    </div>
+  </div>   
+
+</footer>
+
+<!-- JS.......................................................................................................................... -->
+
+<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
    <script src="js/categoria.js"></script>
   </body>
 
