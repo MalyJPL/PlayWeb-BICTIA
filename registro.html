@@ -23,23 +23,24 @@
 </head>
 
 <body>
-    <section class="form-register">
-        <h4 class="tituloInicial">Registro</h4>
-        <input class="controls" type="text" id="user" placeholder="Usuario">
-        <input class="controls" type="text" id="name" placeholder="Nombres y Apellidos">
-        <input class="controls" type="email" id="email" placeholder="Ingresa tu Correo">
-        <input class="controls" type="password" id="password" placeholder="Ingresa tu Contraseña">
-        <div class="checkboxTerminos">
-            <input type="checkbox">
-            <span class="checkmark">Estoy de Acuerdo con<a href="#">Terminos y Condiciones</span>
+    <div class="section">
+        <video id="video" autoplay loop muted>
+        <source src="img/uno.mp4"></video>
+        <div class="form-register">
+            <img id="logoRegistro" src="img/logo.png" alt="logo">
+            <h4 class="tituloInicial">Registro</h4>
+            <input class="controls" type="text" id="user" placeholder="Usuario">
+            <input class="controls" type="text" id="name" placeholder="Nombres y Apellidos">
+            <input class="controls" type="email" id="email" placeholder="Ingresa tu Correo">
+            <input class="controls" type="password" id="password" placeholder="Ingresa tu Contraseña">
+            <div class="checkboxTerminos">
+                <input type="checkbox" id="checkBox">
+                <span class="checkmark">Estoy de acuerdo con<a href="TyC.html" target="_blank"> Terminos y Condiciones.</span>
+            </div>
+            <input class="botonsRegistro" type="submit" value="Registrarse" onclick="register()">
+            <input class="botonsLogin" type="button" value="Ya tengo una cuenta" onclick="buttonLogin()">
         </div>
-        <br>
-        <input class="botonsRegistro" type="submit" value="Registrarse" onclick="register()">
-        <br>
-        <br>
-        <input class="botonsLogin" type="button" value="Login" onclick="buttonLogin()">
-    </section>
-
+    </div>
     <!-- JavaScript -->
     <script src="js/registro.js"></script>
     <!-- Alertify -->

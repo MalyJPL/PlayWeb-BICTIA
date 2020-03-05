@@ -23,15 +23,18 @@
 </head>
 
 <body>
-    <section class="form-register">
-        <h4 class="tituloInicial">Login</h4>
-        <input class="controls" type="text" id="userLogin" placeholder="Usuario">
-        <input class="controls" type="password" id="passwordLogin" placeholder="Contraseña">
-        <input class="botonsLogin" type="submit" value="Ingresar" onclick="login()">
-        <br>
-        <br>
-        <input class="botonsRegistro" type="button" value="Registrarse" onclick="buttonRegistro()">
-    </section>
+    <div class="section">
+        <video id="video" autoplay loop muted>
+        <source src="img/uno.mp4"></video>
+        <div class="form-register">
+            <img id="logoLogin" src="img/logo.png" alt="logo">
+            <h4 class="tituloInicial">Login</h4>
+            <input class="controls" type="text" id="userLogin" placeholder="Usuario">
+            <input class="controls" type="password" id="passwordLogin" placeholder="Contraseña">
+            <input class="botonsLogin" type="submit" value="Ingresar" onclick="login()">
+            <input class="botonsRegistro" type="button" value="Registrarse" onclick="buttonRegistro()">
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script src="js/registro.js"></script>
