@@ -20,7 +20,11 @@ function register() {
 
         email: email,
 
-        password: password
+        password: password,
+
+        date: "nacimiento",
+
+        photo: "img/usuario1.png"
 
     }
 

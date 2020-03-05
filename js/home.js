@@ -1,12 +1,13 @@
 // javascript del navegador
-/*/
+
 var localuser = JSON.parse(localStorage.user);
 console.log(localuser.user)
-document.getElementById("usuario").innerHTML = localuser.user.toUpperCase() 
-*/
+document.getElementById("usuario").innerHTML = localuser.user.toUpperCase()
+
 // termina javascript del navegador
 
 
+<<<<<<< HEAD
 // JS DEL BUSCADOR INTERNO ------------------------------------
 
 function search() {
@@ -27,6 +28,17 @@ function search() {
 }
 
 
+=======
+// Cerrar Sesión
+
+function buttonCerrarSesion() {
+    alertify.confirm('PlayWeb-Video', '¿Deseas cerrar sesión?', function() {
+        window.location.assign('login.html');
+    }, function() {
+        window.location.assign('home.html');
+    });
+}
+>>>>>>> 0a764c0d643309c2b622e3ce3719bdffc234bd3d
 
 // CARDS Almacena todas las cartas------------------------------------------------
 
@@ -85,13 +97,13 @@ for (var i = 0; i < 66; i++) {
     } else if (i == 5) {
 
         card = {
-            "num": i,
-            "iframe": "https://player.vimeo.com/video/302518612",
-            "titulo": "Shakira-Chantaje",
-            "category": "masVistos",
-            "info": "lo más visto de todos los tiempos"
-        }
-        //02 CARDS clasica ------------------------------------------------
+                "num": i,
+                "iframe": "https://player.vimeo.com/video/302518612",
+                "titulo": "Shakira-Chantaje",
+                "category": "masVistos",
+                "info": "lo más visto de todos los tiempos"
+            }
+            //02 CARDS clasica ------------------------------------------------
     } else if (i == 6) {
 
         card = {
@@ -171,8 +183,7 @@ for (var i = 0; i < 66; i++) {
             "info": "La mejor salsa del mundo solo disponible en playweb"
         }
 
-    }
-    else if (i == 14) {
+    } else if (i == 14) {
 
         card = {
             "num": i,
@@ -182,8 +193,7 @@ for (var i = 0; i < 66; i++) {
             "info": "La mejor salsa del mundo solo disponible en playweb"
         }
 
-    }
-    else if (i == 15) {
+    } else if (i == 15) {
 
         card = {
             "num": i,
@@ -193,8 +203,7 @@ for (var i = 0; i < 66; i++) {
             "info": "La mejor salsa del mundo solo disponible en playweb"
         }
 
-    }
-    else if (i == 16) {
+    } else if (i == 16) {
 
         card = {
             "num": i,
@@ -204,8 +213,7 @@ for (var i = 0; i < 66; i++) {
             "info": "La mejor salsa del mundo solo disponible en playweb"
         }
 
-    }
-    else if (i == 17) {
+    } else if (i == 17) {
 
         card = {
             "num": i,
@@ -217,7 +225,6 @@ for (var i = 0; i < 66; i++) {
 
     }
     // 04 CARDS popular ------------------------------------------------
-
     else if (i == 18) {
 
         card = {
@@ -238,8 +245,7 @@ for (var i = 0; i < 66; i++) {
             "info": "repítelo, la mejor música popular de todos los tiempos"
         }
 
-    }
-    else if (i == 20) {
+    } else if (i == 20) {
 
         card = {
             "num": i,
@@ -249,8 +255,7 @@ for (var i = 0; i < 66; i++) {
             "info": "repítelo, la mejor música popular de todos los tiempos"
         }
 
-    }
-    else if (i == 21) {
+    } else if (i == 21) {
 
         card = {
             "num": i,
@@ -260,8 +265,7 @@ for (var i = 0; i < 66; i++) {
             "info": "repítelo, la mejor música popular de todos los tiempos"
         }
 
-    }
-    else if (i == 22) {
+    } else if (i == 22) {
 
         card = {
             "num": i,
@@ -271,8 +275,7 @@ for (var i = 0; i < 66; i++) {
             "info": "repítelo, la mejor música popular de todos los tiempos"
         }
 
-    }
-    else if (i == 23) {
+    } else if (i == 23) {
 
         card = {
             "num": i,
@@ -305,8 +308,7 @@ for (var i = 0; i < 66; i++) {
             "info": "si te gusta, acá encuentras el regaeton que te anima"
         }
 
-    }
-    else if (i == 26) {
+    } else if (i == 26) {
 
         card = {
             "num": i,
@@ -316,8 +318,7 @@ for (var i = 0; i < 66; i++) {
             "info": "si te gusta, acá encuentras el regaeton que te anima"
         }
 
-    }
-    else if (i == 27) {
+    } else if (i == 27) {
 
         card = {
             "num": i,
@@ -327,8 +328,7 @@ for (var i = 0; i < 66; i++) {
             "info": "si te gusta, acá encuentras el regaeton que te anima"
         }
 
-    }
-    else if (i == 28) {
+    } else if (i == 28) {
 
         card = {
             "num": i,
@@ -338,8 +338,7 @@ for (var i = 0; i < 66; i++) {
             "info": "si te gusta, acá encuentras el regaeton que te anima"
         }
 
-    }
-    else if (i == 29) {
+    } else if (i == 29) {
 
         card = {
             "num": i,
@@ -352,7 +351,6 @@ for (var i = 0; i < 66; i++) {
     }
 
     //06 CARDS  Vallenato ------------------------------------------------
-
     else if (i == 30) {
         card = {
             "num": i,
@@ -372,8 +370,7 @@ for (var i = 0; i < 66; i++) {
             "info": "con sentimiento, los mejores vallenatos"
         }
 
-    }
-    else if (i == 32) {
+    } else if (i == 32) {
 
         card = {
             "num": i,
@@ -383,8 +380,7 @@ for (var i = 0; i < 66; i++) {
             "info": "con sentimiento, los mejores vallenatos"
         }
 
-    }
-    else if (i == 33) {
+    } else if (i == 33) {
 
         card = {
             "num": i,
@@ -394,8 +390,7 @@ for (var i = 0; i < 66; i++) {
             "info": "con sentimiento, los mejores vallenatos"
         }
 
-    }
-    else if (i == 34) {
+    } else if (i == 34) {
 
         card = {
             "num": i,
@@ -405,8 +400,7 @@ for (var i = 0; i < 66; i++) {
             "info": "con sentimiento, los mejores vallenatos"
         }
 
-    }
-    else if (i == 35) {
+    } else if (i == 35) {
 
         card = {
             "num": i,
@@ -419,7 +413,6 @@ for (var i = 0; i < 66; i++) {
     }
 
     //07 CARDS  Electronica ------------------------------------------------
-
     else if (i == 36) {
 
         card = {
@@ -440,8 +433,7 @@ for (var i = 0; i < 66; i++) {
             "info": "complace a tu DJ interior con ésta, la mejor música"
         }
 
-    }
-    else if (i == 38) {
+    } else if (i == 38) {
 
         card = {
             "num": i,
@@ -451,8 +443,7 @@ for (var i = 0; i < 66; i++) {
             "info": "complace a tu DJ interior con ésta, la mejor música"
         }
 
-    }
-    else if (i == 39) {
+    } else if (i == 39) {
 
         card = {
             "num": i,
@@ -462,8 +453,7 @@ for (var i = 0; i < 66; i++) {
             "info": "complace a tu DJ interior con ésta, la mejor música"
         }
 
-    }
-    else if (i == 40) {
+    } else if (i == 40) {
 
         card = {
             "num": i,
@@ -473,8 +463,7 @@ for (var i = 0; i < 66; i++) {
             "info": "complace a tu DJ interior con ésta, la mejor música"
         }
 
-    }
-    else if (i == 41) {
+    } else if (i == 41) {
 
         card = {
             "num": i,
@@ -489,7 +478,6 @@ for (var i = 0; i < 66; i++) {
 
 
     //08 CARDS Reggae ------------------------------------------------
-
     else if (i == 42) {
 
         card = {
@@ -510,8 +498,7 @@ for (var i = 0; i < 66; i++) {
             "info": "para relajarte, escucha con nosotros el mejor reggae"
         }
 
-    }
-    else if (i == 44) {
+    } else if (i == 44) {
 
         card = {
             "num": i,
@@ -521,8 +508,7 @@ for (var i = 0; i < 66; i++) {
             "info": "para relajarte, escucha con nosotros el mejor reggae"
         }
 
-    }
-    else if (i == 45) {
+    } else if (i == 45) {
 
         card = {
             "num": i,
@@ -532,8 +518,7 @@ for (var i = 0; i < 66; i++) {
             "info": "para relajarte, escucha con nosotros el mejor reggae"
         }
 
-    }
-    else if (i == 46) {
+    } else if (i == 46) {
 
         card = {
             "num": i,
@@ -543,8 +528,7 @@ for (var i = 0; i < 66; i++) {
             "info": "para relajarte, escucha con nosotros el mejor reggae"
         }
 
-    }
-    else if (i == 47) {
+    } else if (i == 47) {
 
         card = {
             "num": i,
@@ -557,7 +541,6 @@ for (var i = 0; i < 66; i++) {
     }
 
     //09 CARDS Rock ------------------------------------------------
-
     else if (i == 48) {
 
         card = {
@@ -578,8 +561,7 @@ for (var i = 0; i < 66; i++) {
             "info": "cambia tu mundo con el mejor rock del mundo"
         }
 
-    }
-    else if (i == 50) {
+    } else if (i == 50) {
 
         card = {
             "num": i,
@@ -589,8 +571,7 @@ for (var i = 0; i < 66; i++) {
             "info": "cambia tu mundo con el mejor rock del mundo"
         }
 
-    }
-    else if (i == 51) {
+    } else if (i == 51) {
 
         card = {
             "num": i,
@@ -600,8 +581,7 @@ for (var i = 0; i < 66; i++) {
             "info": "cambia tu mundo con el mejor rock del mundo"
         }
 
-    }
-    else if (i == 52) {
+    } else if (i == 52) {
 
         card = {
             "num": i,
@@ -611,8 +591,7 @@ for (var i = 0; i < 66; i++) {
             "info": "cambia tu mundo con el mejor rock del mundo"
         }
 
-    }
-    else if (i == 53) {
+    } else if (i == 53) {
 
         card = {
             "num": i,
@@ -646,8 +625,7 @@ for (var i = 0; i < 66; i++) {
             "info": "conoce tu tierra a través de la música carranga"
         }
 
-    }
-    else if (i == 56) {
+    } else if (i == 56) {
 
         card = {
             "num": i,
@@ -657,8 +635,7 @@ for (var i = 0; i < 66; i++) {
             "info": "conoce tu tierra a través de la música carranga"
         }
 
-    }
-    else if (i == 57) {
+    } else if (i == 57) {
 
         card = {
             "num": i,
@@ -668,8 +645,7 @@ for (var i = 0; i < 66; i++) {
             "info": "conoce tu tierra a través de la música carranga"
         }
 
-    }
-    else if (i == 58) {
+    } else if (i == 58) {
 
         card = {
             "num": i,
@@ -679,8 +655,7 @@ for (var i = 0; i < 66; i++) {
             "info": "conoce tu tierra a través de la música carranga"
         }
 
-    }
-    else if (i == 59) {
+    } else if (i == 59) {
 
         card = {
             "num": i,
@@ -713,8 +688,7 @@ for (var i = 0; i < 66; i++) {
             "info": "dejate seducir por el Jazz, música de todos los tiempos"
         }
 
-    }
-    else if (i == 62) {
+    } else if (i == 62) {
 
         card = {
             "num": i,
@@ -724,8 +698,7 @@ for (var i = 0; i < 66; i++) {
             "info": "dejate seducir por el Jazz, música de todos los tiempos"
         }
 
-    }
-    else if (i == 63) {
+    } else if (i == 63) {
 
         card = {
             "num": i,
@@ -735,8 +708,7 @@ for (var i = 0; i < 66; i++) {
             "info": "dejate seducir por el Jazz, música de todos los tiempos"
         }
 
-    }
-    else if (i == 64) {
+    } else if (i == 64) {
 
         card = {
             "num": i,
@@ -746,8 +718,7 @@ for (var i = 0; i < 66; i++) {
             "info": "dejate seducir por el Jazz, música de todos los tiempos"
         }
 
-    }
-    else if (i == 65) {
+    } else if (i == 65) {
 
         card = {
             "num": i,
@@ -772,6 +743,7 @@ for (var j = 0; j < categorias.length; j++) { //para cada categoría
     for (var i = 0; i < objs.length; i++) { //recorra los contenidos de la base de datos de videos
         if (objs[i].category === categorias[j]) { // si la categoría del video de la base de datos en esa posición coincide con la del grid de html
             incluyer += '<li><div class="card col-12">' //agrege al contenido la columna de este video y el label lista (importante para búsqueda)
+<<<<<<< HEAD
                 + '<strong><h5 text align ="center" class="titulo"> <strong>' + objs[i].titulo + '</h5>' //el titulo
                 + '<iframe class="video" width="450" height="230" frameborder="0" allow="fullscreen" allowfullscreen src="' //label iframe propiedades del video
                 + objs[i].iframe //lini del video
@@ -780,9 +752,25 @@ for (var j = 0; j < categorias.length; j++) { //para cada categoría
                 + "</div></li>"; //cierre lista (importante para función de búsqueda) y div de columna
         }
     }//terminado de recorrer los objetos
+=======
+                +
+                '<h5  class="titulo">' + objs[i].titulo + '</h5>' //el titulo
+                +
+                '<iframe class="video" width="390" height="150" frameborder="0" allow="fullscreen" allowfullscreen src="' //label iframe propiedades del video
+                +
+                objs[i].iframe //lini del video
+                +
+                '?title=false&portrait=false&byline=false&byline-form=false&baciground=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=0">' //otras propiedades vimeo del video
+                +
+                '</iframe>' //cierre label del video
+                +
+                "</div></li>"; //cierre lista (importante para función de búsqueda) y div de columna
+        }
+    } //terminado de recorrer los objetos
+>>>>>>> 0a764c0d643309c2b622e3ce3719bdffc234bd3d
     var grid = "grid" + (j + 1) //el id de cada categoria de musica en el html es "grid" concatenado cn los numeros del 1 al 10 (numero de categorias)
     document.getElementById(grid).innerHTML = '<div class="row">' + incluyer + '</div> <br>' //inyecte el html al grid de la categoría
-}//inicie de nuevo para el siguiente grid
+} //inicie de nuevo para el siguiente grid
 
 
 
@@ -800,3 +788,12 @@ for (var j = 0; j < categorias.length; j++) { //para cada categoría
 //9 rock
 //10 carranga
 //11 jazz
+
+// $('.video').mouseover(function() {
+//     var player = $("#" + this.id);
+//     froogaloop = $f(player[0].id);
+//     froogaloop.api('play');
+//     player.mouseout(function() {
+//         froogaloop.api('pause');
+//     });
+// });
