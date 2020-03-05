@@ -8,6 +8,9 @@
 
     <!-- Css Style -->
     <link rel="stylesheet" href="css/perfil.css">
+    <!-- Css Style sheet -->
+    <link rel="stylesheet" href="css/registro.css">
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -29,43 +32,39 @@
 
 <body>
 
-    <div class="row">
-        <div class="col-6">
-            <img src="https://via.placeholder.com/150">
-        </div>
-        <div class="col-6">
-            <table>
-                <tr>
-                    <p>Nombre:<div id="name">Nombre de Usuario</div>
-                    </p>
-                </tr>
-                <tr>
-                    <p>Usuario:<div id="user">User</div>
-                    </p>
-                </tr>
-                </tr>
-                <tr>
-                    <p>Correo:<div id="mail">correo@correo.com</div>
-                    </p>
-                </tr>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="subtittle">Bio</div>
-        <div class="dark col-12">
-            <p>Llene con sus datos</p>
+
+    <div class="section">
+        <video id="video" autoplay loop muted>
+        <source src="img/uno.mp4"></video>
+        <div class="form-register"> <div id="modificar">
+            <img id="logoRegistro" src="img/logo.png" alt="logo">
+            <img class="foto" src="img/usuario1.png" width="30%" alt="usuario">
+            <h4 class="tituloInicial" id="usuario">Perfil</h4>
+            <h5 class="tituloInicial">Correo</h5>
+            <p id="correo"></p>
+            <h5 class="tituloInicial">Nombre</h5>
+            <p id="nombre"></p>
+            <h5 class="tituloInicial">Fecha de nacimiento</h5>
+            <p id="fecha"></p>
+            <input class="botonsLogin" type="button" value="Modificar" onclick="modificar()">
+        </div>
         </div>
 
 
-        <div class="subtittle">Intereses</div>
-        <div class="clear col-12">
-            <p>Llene con sus datos</p>
-        </div>
+       
+            
 
     </div>
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="js/registro.js"></script>
+    <!-- Alertify -->
+    <script src="js/alertify.js"></script>
+
+
+    
+    <!-- JavaScript -->
+    <script src="js/perfil.js"></script>
 </body>
 
 </html>
