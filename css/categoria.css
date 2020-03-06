@@ -1,0 +1,77 @@
+/* Comentar todo cambio realizado */
+
+/* Hoja de estilos Css - PlayWeb */
+
+/* Paleta de colores */
+
+/* *{border: 5px solid  red; }
+**{border: 5px solid yellow;}
+***{border: 5px solid lightblue;}
+ */
+/* 
+#c6d8ff
+#71a9f7
+#6b5ca5
+Negro
+Blanco
+
+#1f53c5 axul
+#24203c negro
+
+*/
+
+.container{
+  display: inline;
+}
+
+.col-9{
+  
+  align-items: center;
+  text-align: center;
+}
+
+.videopp{
+
+   padding: 20px;
+   /* margin: auto;
+   margin-left: 5%; */
+}
+
+.pie{
+   
+}
+
+.fa-thumbs-up{
+    font-size:120px;
+    color:black;
+    text-shadow:2px 2px 4px #000000;
+
+}
+
+.fa {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+    min-width: 50px;
+    color: darkblue;
+  }
+  
+  .fa:hover {
+    color: #1f53c5;
+  }
+
+.tituloC{
+font-size: 40px;
+color: #1f53c5;
+text-shadow:2px 2px 4px #000000;
+  }
+
+  .tituloCp{
+    font-size: 20px;
+    color: white;
+      }
+
+      h2{
+        color: #1f53c5;
+      }
+

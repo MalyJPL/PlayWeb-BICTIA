@@ -9,7 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Css Style -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/indestyle.css">
+
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -22,10 +25,65 @@
     <title>PlayWeb</title>
 </head>
 
-<body>
+<body class="opacidad">
+    <video id="video" autoplay loop muted>
+        <source src="img/uno.mp4"></video>
 
+    <!-- <div class="section">
+        <h1> <b>Play</b><i>Web</i></h1> -->
+
+    <div class="container">
+        <div class="section">
+
+        </div>
+        <div class="row" class="inicio">
+            <div class="col-sm">
+                <a href="login.html" class="botonAnimado"><b>LOGIN</b>
+                    <ion-icon name="play"></ion-icon>
+                </a>
+            </div>
+            <div class="col-sm">
+                <img id="buttonOne" src="img/logo.png" alt="" width="200px" height="53px"></a>
+
+            </div>
+            <div class="col-sm">
+                <a href="registro.html" class="botonAnimado"><b>REGISTRO</b>
+                    <ion-icon name="person-add"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <a href="www.twitter.com" target="_blank">
+                    <ion-icon class="iconoIndex" name="logo-twitter"></ion-icon>
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="https://www.pinterest.ca/" target="_blank">
+                    <ion-icon class="iconoIndex" name="logo-pinterest"></ion-icon>
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="https://www.youtube.com/" target="_blank">
+                    <ion-icon class="iconoIndex" name="logo-youtube"></ion-icon>
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="https://www.snapchat.com/l/es">
+                    <ion-icon class="iconoIndex" name="logo-snapchat"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- iconos js -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <script src="js/registro.js"></script>
 </body>
 
 </html>

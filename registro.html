@@ -1,0 +1,57 @@
+<!-- ¡Comentar todo cambio realizado! -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-UA-Compatible" content="ie=edge">
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Css Style sheet -->
+    <link rel="stylesheet" href="css/registro.css">
+
+    <!-- Alertify Style -->
+    <link rel="stylesheet" href="css/alertify/alertify.css">
+
+    <!-- Alertify Theme -->
+    <link rel="stylesheet" href="css/alertify/default.css">
+
+    <title>Formulario Registro</title>
+</head>
+
+<body>
+    <div class="section">
+        <video id="video" autoplay loop muted>
+        <source src="img/uno.mp4"></video>
+        <!-- video de fondo !-->
+        <div class="form-register">
+            <!-- cuadro con formulario de registro !-->
+            <a href="index.html"><img id="logoRegistro" src="img/logo.png" alt="logo"></a>
+            <h4 class="tituloInicial">Registro</h4>
+            <input class="controls" type="text" id="user" placeholder="Usuario">
+            <!-- casillas para introducir datos de usuario !-->
+            <input class="controls" type="text" id="name" placeholder="Nombres y Apellidos">
+            <input class="controls" type="email" id="email" placeholder="Ingresa tu Correo">
+            <input class="controls" type="password" id="password" placeholder="Ingresa tu Contraseña">
+            <div class="checkboxTerminos">
+                <!-- checkbox de terminos !-->
+                <input type="checkbox" id="checkBox">
+                <span class="checkmark">Estoy de acuerdo con<a href="TyC.html" target="_blank"> Terminos y Condiciones.</a></span>
+                <!-- redirige a terminos terminos !-->
+            </div>
+            <input class="botonsRegistro" type="submit" value="Registrarse" onclick="register()">
+            <!-- boton funcion para guardar en el local storage datos de usario y redirigir al login !-->
+            <input class="botonsLogin" type="button" value="Ya tengo una cuenta" onclick=buttonLogin()>
+            <!-- boton  para redirigir al login !-->
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="js/registro.js"></script>
+    <!-- Alertify -->
+    <script src="js/alertify.js"></script>
+</body>
+
+</html>

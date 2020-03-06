@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Css Style -->
+    <link rel="stylesheet" href="css/perfil.css">
+    <!-- Css Style sheet -->
+    <link rel="stylesheet" href="css/registro.css">
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <title>PlayWeb Perfil</title>
+</head>
+
+<body>
+
+
+
+    <div class="section">
+        <video id="video" autoplay loop muted>
+        <source src="img/uno.mp4"></video>
+        <div class="form-register">
+            <div id="modificar">
+                <a href="home.html"><img id="logoRegistro" src="img/logo.png" alt="logo"></a>
+                <img class="foto" src="img/usuario1.png" width="30%" alt="usuario">
+                <h4 class="tituloInicial" id="usuario">Perfil</h4>
+                <h5 class="tituloInicial">Correo</h5>
+                <p id="correo"></p>
+                <h5 class="tituloInicial">Nombre</h5>
+                <p id="nombre"></p>
+                <h5 class="tituloInicial">Fecha de nacimiento</h5>
+                <p id="fecha"></p>
+                <input class="botonsLogin" type="button" value="Modificar" onclick="modificar()">
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+    <!-- JavaScript -->
+    <script src="js/registro.js"></script>
+    <!-- Alertify -->
+    <script src="js/alertify.js"></script>
+
+
+
+    <!-- JavaScript -->
+    <script src="js/perfil.js"></script>
+</body>
+
+</html>

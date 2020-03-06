@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Css Style -->
+    <link rel="stylesheet" href="css/registro.css">
+
+    <!-- Alertify Style -->
+    <link rel="stylesheet" href="css/alertify/alertify.css">
+
+    <!-- Alertify Theme -->
+    <link rel="stylesheet" href="css/alertify/default.css">
+
+
+    <title>PlayWeb</title>
+</head>
+
+<body>
+    <div class="section">
+        <video id="video" autoplay loop muted> <!-- video de fondo -->
+        <source src="img/uno.mp4"></video>
+        <div class="form-register">
+            <!-- cuadro con formato de login-->
+            <a href="index.html"><img id="logoLogin" src="img/logo.png" alt="logo"></a>
+            <!-- logo-->
+            <h4 class="tituloInicial">Login</h4>
+            <!-- t'itulo login-->
+            <input class="controls" type="text" id="userLogin" placeholder="Usuario">
+            <!-- input de datos de usuario !-->
+            <input class="controls" type="password" id="passwordLogin" placeholder="Contraseña">
+            <input class="botonsLogin" type="submit" value="Ingresar" onclick="login()">
+            <!-- boton funcion para validar datos de usario !-->
+            <input class="botonsRegistro" type="button" value="Registrarse" onclick="buttonRegistro()">
+            <!-- boton  para redirigir a registro!-->
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/registro.js"></script>
+    <!-- Alertify -->
+    <script src="js/alertify.js"></script>
+</body>
+
+</html>
