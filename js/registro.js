@@ -37,7 +37,7 @@ function register() {
         );
         window.location.assign('login.html'); // Redirigimos a la página login.html
 
-    } else {
+    } else { //si no esta toda la informacion, indicar con un borde rojo donde no hay informacion
 
         var alerta = "solid 2px red";
 
@@ -79,6 +79,8 @@ function login() {
 
     let alerta = "solid 2px red";
 
+    //si no hay informacion, alerte con el borde del input
+
     if (userLogin === '') {
 
         document.getElementById('userLogin').style.border = alerta;
@@ -89,9 +91,10 @@ function login() {
 
         document.getElementById('passwordLogin').style.border = alerta;
 
+        //si hay infrmacion, validar que es el usuario y la contrase;a son crrectos
     } else if (userLogin === localuser.user && passwordLogin === localuser.password) {
         window.location.assign("home.html")
-    } else {
+    } else { //si no son correctos, alertar que el usario 
         if (userLogin !== localuser.user) {
             alertifyPosition;
             alertify.error('Usuario no encontrado.');
@@ -102,10 +105,10 @@ function login() {
     }
 }
 
-function buttonLogin() {
+function buttonLogin() { //enviar a pagina login
     window.location.assign('login.html');
 }
 
-function buttonRegistro() {
+function buttonRegistro() { //enviar a pagina registro
     window.location.assign('registro.html');
 }

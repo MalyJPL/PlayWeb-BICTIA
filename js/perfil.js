@@ -11,13 +11,20 @@
 
 function modificar(){
 var contenido =""
-
-contenido =  '<p>Escriba los datos que desea actualizar</p><input class="controls" type="text" id="photo" placeholder='+localuser.photo +'>'+
-'<input class="controls" type="text" id="user" placeholder='+localuser.user+'>'+
-'<h5 class="tituloInicial">Correo</h5> <input class="controls" type="email" id="email" placeholder='+localuser.email+'>'
-+ '<h5 class="tituloInicial">Nombre</h5> <input class="controls" type="text" id="name" placeholder='+localuser.name+'>'+
-'<h5 class="tituloInicial">Fecha de nacimiento</h5><input class="controls" type="date" id="date" placeholconder='+localuser.date+'>'+
-'<input class="botonsLogin" type="button" value="Guardar" onclick="guardar()">'
+//se inyecta un codigo con inputs para cambiar los datos del usuario. el placeholder de cada input tiene la
+//datos almacenados 
+contenido =  '<p>Escriba los datos que desea actualizar</p>' //titulo
++'<input class="controls" type="text" id="photo" placeholder=' //input de foto
++localuser.photo +'>' // placeholder de dato previamente almacenado de foto
++'<input class="controls" type="text" id="user" placeholder=' //input de usuario
++localuser.user+'>' // placeholder de dato previamente almacenado de user
++'<h5 class="tituloInicial">Correo</h5> <input class="controls" type="email" id="email" placeholder=' //input de email
++localuser.email+'>' // placeholder de dato previamente almacenado de email
++ '<h5 class="tituloInicial">Nombre</h5> <input class="controls" type="text" id="name" placeholder=' //input de nombre
++localuser.name+'>'+ // placeholder de dato previamente almacenado de nombre
+'<h5 class="tituloInicial">Fecha de nacimiento</h5><input class="controls" type="date" id="date" placeholconder=' //fecha nacimiento
++localuser.date+'>'+ // placeholder de dato previamente almacenado de fecha de nacimiento
+'<input class="botonsLogin" type="button" value="Guardar" onclick="guardar()">' //boton que activa funcion guardar
 
 document.getElementById("modificar").innerHTML = contenido
 
@@ -25,56 +32,27 @@ console.log('usuario al modificar' + JSON.stringify(localuser))
 }
 
 function guardar(){
-
+//almacena en variables los datos nuevos introducidos por el usuario
     var newphoto = document.getElementById("photo").value
     var newuser = document.getElementById("user").value
-
     var newemail = document.getElementById("email").value
     var newname = document.getElementById("name").value
     var newdate = document.getElementById("date").value
-
-    console.log(newuser)
-
  
-    if (newphoto !== ""){
-        localuser.photo = newphoto}else{}
-
-    if (newuser !== ""){
-        localuser.user = newuser}else{}
-
-    if (newemail !== ""){
-         localuser.mail = newemail}else{}
-
-    if (newname !== ""){
-         localuser.name = newname }else{}
-
-    if (newdate !== ""){
-        localuser.date = newdate}else{}
+    //revisa si los datos nuevos estan vacios. Si no lo estan, asigna a localuser el valor nuevo
+    if (newphoto !== ""){  localuser.photo = newphoto}
+    if (newuser !== ""){   localuser.user = newuser}
+    if (newemail !== ""){  localuser.mail = newemail}
+    if (newname !== ""){ localuser.name = newname }
+    if (newdate !== ""){  localuser.date = newdate}
         
+        localStorage.removeItem("user"); //borramos los datos anteriores en el localStore del usuario
 
-        localStorage.removeItem("user");
-    localStorage.setItem( // Guardamos el Objeto como String
+    localStorage.setItem( // Guardamos el Objeto como String en local storage
          "user", JSON.stringify(localuser), );
 
-         location.reload();
-         
+         location.reload(); //recarga para regresar al perfil lleno
 
-         localuser == JSON.parse(localStorage.user);
+         localuser = JSON.parse(localStorage.user); //actualizamos usuario en este javascript
     }
 
-
-/*
-<input class="controls" type="date" id="date" placeholconder="Fecha de nacimiento">
-
-
-  <input class="controls" type="text" id="user" placeholder="Usuario">
-  <input class="controls" type="text" id="name" placeholder="Nombres y Apellidos">
-  <input class="controls" type="email" id="email" placeholconder="Ingresa tu Correo">
-  <input class="controls" type="password" id="password" placeholder="Ingresa tu Contraseña">
-  <div class="checkboxTerminos">
-      <input type="checkbox" id="checkBox">
-      <span class="checkmark">Estoy de acuerdo con<a href="#"> Terminos y Condiciones.</span>
-  </div>
-  <input class="botonsRegistro" type="submit" value="Registrarse" onclick="register()">
-  <input class="botonsLogin" type="button" value="Ya tengo una cuenta" onclick="buttonLogin()">
-</div> */
