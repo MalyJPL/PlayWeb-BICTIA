@@ -1,7 +1,6 @@
 // javascript del navegador
 
 var localuser = JSON.parse(localStorage.user);
-console.log(localuser.user)
 document.getElementById("usuario").innerHTML = localuser.user.toUpperCase() 
 
 // termina javascript del navegador
@@ -15,6 +14,7 @@ function cerrarSesion(){
 
 function myFunction(x) {
     x.classList.toggle("fa-thumbs-down");
+    console.log("entra")
   } 
 
   var video = document.getElementById('video1')
@@ -848,14 +848,23 @@ var incluyeGeneral=''
 
 
 incluyeGeneral +=
-     '<h2 class= "titulo"><strong>' + objs[i].titulo + '</strong></h2>'
-    + '<iframe class="videopp" height="100%" width="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objs[i].iframe + '">' + '</iframe>' 
-    + '<h4 class="pie">'  + objs[i].category + '|' + objs[i].info + '</h4>'
-    + '<h6>' + objs[i].vistas + '<i onclick="myFunction(this)" class="fa fa-thumbs-up" type=button> </i> </h6>'
+     '<h2 class= "tituloC"><strong>' + objs[i].titulo 
+     + '</strong></h2>'
+    + '<iframe class="videopp" height="100%" width="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' 
+    + objs[i].iframe + '">' 
+    + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&loop=0&autoplay=1">' 
+    + '</iframe>' 
+    + '<h4 class="pie">'  
+    + objs[i].category + '|' 
+    + objs[i].info + '</h4>'
+    + '<h6>' 
+    + objs[i].vistas 
+    + '</h6>'
+    + '<h2> <i class="fa fa-thumbs-up" onclick=myFunction(this) aria-hidden="true"></i></h2>'
    
 
-document.getElementById("videoGrande").innerHTML = incluyeGeneral + '<br>' 
-console.log(incluyeGeneral);
+document.getElementById("videoGrande").innerHTML = incluyeGeneral 
+
 
 /* Aca empieza la inyección de codigo de los videos pequeños */
 
@@ -865,21 +874,35 @@ x=Math.floor(Math.random()*(65-0))
 while(x===i || objs[x].category!=objs[i].category){x=Math.floor(Math.random()*(65-0))}
 
 incluyeRelacionado +=
-    '<h3 class= "titulo">' + objs[x].titulo + '</h3>'
-    + '<iframe class="videopp" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objs[x].iframe + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=1">' + '</iframe>' 
-    +'<h6 class="pie"><strong>'  + objs[x].category +'</strong></h6>'
+    '<h3 class= "tituloCp">' + objs[x].titulo  + '</h3>'
+    + '<iframe class="videopp" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' 
+    + objs[x].iframe 
+    + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=0">' 
+    + '</iframe>' 
+    +'<h6 class="pie"><strong>'  
+    + objs[x].category 
+    +'</strong></h6>'
+    +'<br>'
 
     y=Math.floor(Math.random()*(65-0))
     while(y===i || y===x || objs[y].category!=objs[i].category){y=Math.floor(Math.random()*(65-0))}
 
-    incluyeRelacionado +='<h3 class= "titulo">' + objs[y].titulo + '</h3>'
-    + '<iframe class="videopp" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' + objs[y].iframe + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=1">' + '</iframe>' 
-    +'<h6 class="pie"><strong>'  + objs[y].category +'</strong></h6>'
+    incluyeRelacionado +=
+    '<h3 class= "tituloCp">' 
+    + objs[y].titulo + '</h3>'
+    + '<iframe class="videopp" frameborder="0" allow="autoplay; fullscreen" allowfullscreen src="' 
+    + objs[y].iframe 
+    + '?title=false&portrait=false&byline=false&byline-form=false&background=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=0">' 
+    + '</iframe>' 
+    +'<h6 class="pie"><strong>'  
+    + objs[y].category 
+    +'</strong></h6>'
+    +'<br>'
+
 
 document.getElementById("videopeq").innerHTML =  '<h2>Relacionados</h2>'+ incluyeRelacionado + '<br>' 
-console.log(incluyeRelacionado);
 
 
 
-/* height="100%" width="100%" */
+
 

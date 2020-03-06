@@ -25,20 +25,20 @@
 <body>
     <div class="section">
         <video id="video" autoplay loop muted>
-        <source src="img/uno.mp4"></video>
-        <div class="form-register">
+        <source src="img/uno.mp4"></video> <!-- video de fondo !-->
+        <div class="form-register"> <!-- cuadro con formulario de registro !-->
             <a href="index.html"><img id="logoRegistro" src="img/logo.png" alt="logo"></a>
             <h4 class="tituloInicial">Registro</h4>
-            <input class="controls" type="text" id="user" placeholder="Usuario">
+            <input class="controls" type="text" id="user" placeholder="Usuario"> <!-- casillas para introducir datos de usuario !-->
             <input class="controls" type="text" id="name" placeholder="Nombres y Apellidos">
             <input class="controls" type="email" id="email" placeholder="Ingresa tu Correo">
             <input class="controls" type="password" id="password" placeholder="Ingresa tu Contraseña">
-            <div class="checkboxTerminos">
+            <div class="checkboxTerminos">  <!-- checkbox de terminos !-->
                 <input type="checkbox" id="checkBox">
-                <span class="checkmark">Estoy de acuerdo con<a href="TyC.html" target="_blank"> Terminos y Condiciones.</span>
+                <span class="checkmark">Estoy de acuerdo con<a href="TyC.html" target="_blank"> Terminos y Condiciones.</span> <!-- redirige a terminos terminos !-->
             </div>
-            <input class="botonsRegistro" type="submit" value="Registrarse" onclick="register()">
-            <input class="botonsLogin" type="button" value="Ya tengo una cuenta" onclick=buttonLogin()>
+            <input class="botonsRegistro" type="submit" value="Registrarse" onclick="register()"> <!-- boton funcion para guardar en el local storage datos de usario y redirigir al login !-->
+            <input class="botonsLogin" type="button" value="Ya tengo una cuenta" onclick=buttonLogin()> <!-- boton  para redirigir al login !-->
         </div>
     </div>
     <!-- JavaScript -->

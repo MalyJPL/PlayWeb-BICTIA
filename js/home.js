@@ -772,18 +772,24 @@ for (var i = 0; i < 66; i++) {
 }
 
 
-var categorias = ["masVistos", "clasica", "salsa", "popular", "reggaeton", "vallenato", "electronica", "reggae", "rock", "carranga", "jazz"] //categorias existentes
+var categorias = ["masVistos", "clasica", "salsa", "popular", "reggaeton", "vallenato", "electronica", "reggae", "rock", "carranga", "jazz"] //categorias 
 for (var j = 0; j < categorias.length; j++) { //para cada categoría
     var incluyer = ""; //esta variable guarda el html que se va a incluir en cada grid. se inicia vacio para cada categoria
     for (var i = 0; i < objs.length; i++) { //recorra los contenidos de la base de datos de videos
         if (objs[i].category === categorias[j]) { // si la categoría del video de la base de datos en esa posición coincide con la del grid de html
-            incluyer += '<li><div class="card col-12 onclick="ingresoCategoria(' + objs[i].num + ')">' //agrege al contenido la columna de este video y el label lista (importante para búsqueda)
-                + '<strong><h5 text align ="center" class="titulo" onclick="ingresoCategoria(' + objs[i].num + ')"> <strong>' + objs[i].titulo + '</h5>' //el titulo
-                + '<iframe class="video" width="450" height="230" frameborder="0" allow="fullscreen" allowfullscreen src="' //label iframe propiedades del video
-                + objs[i].iframe //lini del video
-                + '?title=false&portrait=false&byline=false&byline-form=false&baciground=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=0">' //otras propiedades vimeo del video
-                + '</iframe>'//cierre label del video
-                + "</div></li>"; //cierre lista (importante para función de búsqueda) y div de columna
+            incluyer += '<li><div class="card col-12 onclick="ingresoCategoria(' 
+            + objs[i].num + ')">' //agrege al contenido la columna de este video y el label lista (importante para búsqueda)
+            + '<strong><h5 text align ="center" class="titulo" onclick="ingresoCategoria(' 
+            + objs[i].num + ')"> <strong>' 
+            + objs[i].titulo 
+            + '</h5>' //el titulo
+            + '<iframe class="video" width="450" height="230" frameborder="0" allow="fullscreen" allowfullscreen src="' 
+             //label iframe propiedades del video
+            + objs[i].iframe //lini del video
+            + '?title=false&portrait=false&byline=false&byline-form=false&baciground=false&video-byline=false&autopause=false&muted=true&loop=0&autoplay=0">' 
+            //otras propiedades vimeo del video
+            + '</iframe>'//cierre label del video
+            + "</div></li>"; //cierre lista (importante para función de búsqueda) y div de columna
         }
     }//terminado de recorrer los objetos
     var grid = "grid" + (j + 1) //el id de cada categoria de musica en el html es "grid" concatenado cn los numeros del 1 al 10 (numero de categorias)

@@ -45,15 +45,33 @@ Blanco
     font-size:120px;
     color:black;
     text-shadow:2px 2px 4px #000000;
-    position: fixed;
+
 }
 
 .fa {
     font-size: 50px;
     cursor: pointer;
     user-select: none;
+    min-width: 50px;
+    color: darkblue;
   }
   
   .fa:hover {
-    color: darkblue;
+    color: #1f53c5;
   }
+
+.tituloC{
+font-size: 40px;
+color: #1f53c5;
+text-shadow:2px 2px 4px #000000;
+  }
+
+  .tituloCp{
+    font-size: 20px;
+    color: white;
+      }
+
+      h2{
+        color: #1f53c5;
+      }
+
